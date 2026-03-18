@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Store</title>
+<style>
+body {
+ margin: 0;
+ font-family: sans-serif;
+ background: #0f172a;
+ color: white;
+}
+/* Header */
+header {
+ display: flex;
+ justify-content: space-between;
+ padding: 15px;
+ background: #020617;
+}
+button {
+ cursor: pointer;
+ border: none;
+ padding: 8px 12px;
+ border-radius: 6px;
+}
+/* Books */
+.container {
+ padding: 20px;
+}
+.books {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+ gap: 20px;
+}
+.book {
+ background: #1e293b;
+ padding: 10px;
+ border-radius: 10px;
+ text-align: center;
+ transition: 0.3s;
+}
+.book:hover {
+ transform: scale(1.05);
+}
+.offer {
+ color: #facc15;
+}
+/* Cart */
+#cart {
+ position: fixed;
+ right: 0;
+ top: 0;
+ width: 250px;
+ height: 100%;
+ background: #020617;
+ padding: 10px;
+ display: none;
+}
+/* Search */
+input {
+ padding: 5px;
+ border-radius: 5px;
+}
+</style>
+</head>
+<body>
+<header>
+<h2>📚 BookStore</h2>
+<div>
+<input type="text" id="search" placeholder="Search...">
+<button onclick="changeLang()">🌐</button>
+<button onclick="toggleCart()">🛒</button>
+</div>
+</header>
+<div class="container">
+<h3 id="title">کتاب‌ها</h3>
+<div class="books" id="bookList"></div>
+</div>
+<div id="cart">
+<h3>Cart</h3>
+<ul id="cartItems"></ul>
+</div>
+<script>
+let lang = "fa";
+const books = [
+ {name:{fa:"کتاب روانشناسی",en:"Psychology Book"}, price:100, offer:true},
+ {name:{fa:"رمان عاشقانه",en:"Love Novel"}, price:80, offer:false},
+ {name:{fa:"کتاب علمی",en:"Science Book"}, price:120, offer:true}
+];
+let cart = [];
+function renderBooks() {
+ const list = document.getElementById("bookList");
+ list.innerHTML = "";
+ books.forEach((b,i)=>{
+   if(filter && !b.name[lang].toLowerCase().includes(filter)) return;
+   list.innerHTML += `
+<div class="book">
+<h4>${b.name[lang]}</h4>
+<p>${b.price}$</p>
+       ${b.offer ? '<p class="offer">🔥 Offer</p>' : ""}
+<button onclick="addToCart(${i})">Add</button>
+</div>
+   `;
+ });
+}
+function addToCart(i){
+ cart.push(books[i]);
+ renderCart();
+}
+function renderCart(){
+ const ul = document.getElementById("cartItems");
+ ul.innerHTML = "";
+ cart.forEach(c=>{
+   ul.innerHTML += `<li>${c.name[lang]}</li>`;
+ });
+}
+function toggleCart(){
+ const c = document.getElementById("cart");
+ c.style.display = c.style.display === "block" ? "none" : "block";
+}
+function changeLang(){
+ lang = lang === "fa" ? "en" : "fa";
+ document.getElementById("title").innerText = lang === "fa" ? "کتاب‌ها" : "Books";
+ renderBooks();
+ renderCart();
+}
+let filter = "";
+document.getElementById("search").addEventListener("input", e=>{
+ filter = e.target.value.toLowerCase();
+ renderBooks();
+});
+renderBooks();
+</script>
+</body>
+</html>
