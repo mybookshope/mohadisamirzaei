@@ -1,55 +1,150 @@
+<!-- index.html -->
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>فروشگاه جهانی کتاب</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<title>Professional BookShop</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <style>
-       body { background-color: #0b1120; color: white; font-family: sans-serif; }
-       .nav-custom { background: #1e293b; padding: 15px; border-bottom: 2px solid #fbbf24; }
-       .language-box { background: #334155; color: #fbbf24; border: 1px solid #fbbf24; border-radius: 5px; cursor: pointer; }
-       .hero-section { padding: 80px 0; background: linear-gradient(45deg, #1e293b, #0f172a); text-align: center; margin-bottom: 40px; }
-       .book-card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 20px; transition: 0.3s; }
-       .book-card:hover { border-color: #fbbf24; transform: translateY(-5px); }
+   /* style.css content */
+   body {
+     font-family: 'Arial', sans-serif;
+     background-color: #f8f9fa;
+   }
+   .book-card:hover {
+     transform: translateY(-5px);
+     transition: 0.3s;
+     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+   }
+   .category-card:hover {
+     background-color: #0d6efd;
+     color: white;
+     cursor: pointer;
+     transition: 0.3s;
+   }
+   .navbar-brand {
+     font-weight: bold;
+   }
+   footer {
+     background-color: #343a40;
+     color: white;
+     padding: 20px 0;
+     margin-top: 50px;
+   }
 </style>
 </head>
 <body>
-<nav class="nav-custom d-flex justify-content-between align-items-center">
-<h4 class="m-0 text-warning">Global BookStore</h4>
-<div>
-<label class="small me-2">Language / زبان:</label>
-<select class="language-box p-1">
-<option>Persian (فارسی)</option>
-<option>English</option>
-<option>Arabic (العربية)</option>
-<option>German (Deutsch)</option>
-</select>
+<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<div class="container">
+<a class="navbar-brand" href="#">BookShop</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+<ul class="navbar-nav">
+<li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
+<li class="nav-item"><a class="nav-link" href="#books">Books</a></li>
+<li class="nav-item"><a class="nav-link" href="#cart">Cart</a></li>
+</ul>
+</div>
 </div>
 </nav>
-<div class="hero-section">
-<h1 class="display-4 fw-bold">بزرگترین کتابخانه بین‌المللی</h1>
-<p class="lead">کتاب‌های گوناگون به تمام زبان‌های جهان</p>
-</div>
-<div class="container">
-<div class="row g-4">
-<div class="col-md-4">
-<div class="book-card text-center">
-<div class="badge bg-warning text-dark mb-2">English</div>
-<h5>The Art of Coding</h5>
-<p class="text-secondary small">Price: 25$</p>
-<button class="btn btn-outline-warning btn-sm">Visit / بازدید</button>
+<!-- Carousel -->
+<div id="carouselBooks" class="carousel slide mt-3" data-bs-ride="carousel">
+<div class="carousel-inner">
+<div class="carousel-item active">
+<img src="images/book1.jpg" class="d-block w-100" alt="Book 1">
+<div class="carousel-caption d-none d-md-block">
+<h5>Top Seller 1</h5>
 </div>
 </div>
-<div class="col-md-4">
-<div class="book-card text-center">
-<div class="badge bg-primary mb-2">فارسی</div>
-<h5>دیوان حافظ</h5>
-<p class="text-secondary small">قیمت: ۱۲۰ هزار تومان</p>
-<button class="btn btn-outline-warning btn-sm">Visit / بازدید</button>
+<div class="carousel-item">
+<img src="images/book2.jpg" class="d-block w-100" alt="Book 2">
+<div class="carousel-caption d-none d-md-block">
+<h5>Top Seller 2</h5>
 </div>
 </div>
 </div>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselBooks" data-bs-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselBooks" data-bs-slide="next">
+<span class="carousel-control-next-icon"></span>
+</button>
 </div>
+<!-- Categories -->
+<section id="categories" class="container my-5">
+<h2 class="mb-4">Categories</h2>
+<div class="row text-center">
+<div class="col-md-3 mb-3"><div class="category-card p-3 border rounded">Fiction</div></div>
+<div class="col-md-3 mb-3"><div class="category-card p-3 border rounded">Science</div></div>
+<div class="col-md-3 mb-3"><div class="category-card p-3 border rounded">History</div></div>
+<div class="col-md-3 mb-3"><div class="category-card p-3 border rounded">Children</div></div>
+</div>
+</section>
+<!-- Books -->
+<section id="books" class="container my-5">
+<h2 class="mb-4">Books</h2>
+<div class="row">
+<div class="col-md-3 mb-4">
+<div class="card book-card h-100">
+<img src="images/book1.jpg" class="card-img-top" alt="Book 1">
+<div class="card-body">
+<h5 class="card-title">Book Title 1</h5>
+<p class="card-text">Author: Author 1</p>
+<p class="card-text fw-bold">$15.00</p>
+<button class="btn btn-primary add-to-cart">Add to Cart</button>
+</div>
+</div>
+</div>
+<div class="col-md-3 mb-4">
+<div class="card book-card h-100">
+<img src="images/book2.jpg" class="card-img-top" alt="Book 2">
+<div class="card-body">
+<h5 class="card-title">Book Title 2</h5>
+<p class="card-text">Author: Author 2</p>
+<p class="card-text fw-bold">$20.00</p>
+<button class="btn btn-primary add-to-cart">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Add more books here -->
+</div>
+</section>
+<!-- Cart -->
+<section id="cart" class="container my-5">
+<h2 class="mb-4">Your Cart</h2>
+<ul id="cartItems" class="list-group mb-3">
+<li class="list-group-item">Your cart is empty</li>
+</ul>
+<button class="btn btn-success" id="checkoutBtn">Checkout</button>
+</section>
+<!-- Footer -->
+<footer class="text-center">
+ © 2026 BookShop | Social Media Links
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+ // script.js content
+ const cartItems = document.getElementById("cartItems");
+ const addToCartButtons = document.querySelectorAll(".add-to-cart");
+ addToCartButtons.forEach(btn => {
+   btn.addEventListener("click", function() {
+     const bookTitle = this.closest(".card").querySelector(".card-title").innerText;
+     const bookPrice = this.closest(".card").querySelector(".fw-bold").innerText;
+     const li = document.createElement("li");
+     li.className = "list-group-item";
+     li.innerText = `${bookTitle} - ${bookPrice}`;
+     cartItems.appendChild(li);
+   });
+ });
+ document.getElementById("checkoutBtn").addEventListener("click", function() {
+   alert("Your payment was successful!");
+   cartItems.innerHTML = '<li class="list-group-item">Your cart is empty</li>';
+ });
+</script>
 </body>
 </html>
