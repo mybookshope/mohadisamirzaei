@@ -8,8 +8,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <style>
 
-        /* رنگ‌بندی الهام گرفته از لوگوی شما */
-
         :root {
 
             --dark-green: #1a3a32;
@@ -17,8 +15,6 @@
             --gold: #c5a059;
 
             --cream-bg: #f9f7f2;
-
-            --white: #ffffff;
 
         }
 
@@ -32,15 +28,13 @@
 
             margin: 0;
 
-            overflow-x: hidden;
-
         }
 
-        /* هدر لوکس */
+        /* Navbar */
 
         .navbar {
 
-            background-color: var(--white) !important;
+            background-color: white !important;
 
             border-bottom: 2px solid var(--gold);
 
@@ -50,19 +44,19 @@
 
         .navbar-brand img {
 
-            height: 80px; /* لوگوی شما */
+            height: 70px;
 
             width: auto;
 
         }
 
-        /* بخش ویدیو (Hero Section) */
+        /* Video Section */
 
         .hero-video {
 
             position: relative;
 
-            height: 75vh;
+            height: 70vh;
 
             display: flex;
 
@@ -96,95 +90,55 @@
 
         }
 
-        /* دکمه‌ها */
+        /* Categories (Icons like your image) */
 
-        .btn-gold {
-
-            background-color: var(--gold);
-
-            color: white;
-
-            border-radius: 50px;
-
-            padding: 12px 35px;
-
-            font-weight: bold;
-
-            border: none;
-
-            transition: 0.3s;
-
-        }
-
-        .btn-gold:hover {
-
-            background-color: var(--dark-green);
-
-            transform: translateY(-3px);
-
-        }
-
-        /* بخش دسته‌بندی‌ها (دایره‌ای مشابه عکس ارسالی) */
-
-        .cat-circle {
-
-            width: 100px;
-
-            height: 100px;
+        .cat-box {
 
             background: white;
-
-            border-radius: 50%;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            margin: 0 auto 15px;
-
-            border: 1px solid #eee;
-
-            transition: 0.3s;
-
-            color: var(--dark-green);
-
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-
-        }
-
-        .cat-circle:hover {
-
-            border-color: var(--gold);
-
-            color: var(--gold);
-
-        }
-
-        /* کارت‌های کتاب */
-
-        .book-card {
-
-            background: white;
-
-            border: none;
 
             border-radius: 15px;
 
             padding: 20px;
 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+
             transition: 0.3s;
 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-
-            margin-bottom: 30px;
+            border: 1px solid transparent;
 
         }
 
-        .book-card:hover {
+        .cat-box:hover {
 
-            transform: translateY(-10px);
+            border-color: var(--gold);
+
+            transform: translateY(-5px);
+
+        }
+
+        .cat-icon {
+
+            font-size: 40px;
+
+            color: var(--gold);
+
+            margin-bottom: 10px;
+
+        }
+
+        /* Book Cards */
+
+        .book-card {
+
+            background: white;
+
+            border-radius: 10px;
+
+            padding: 15px;
+
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+
+            text-align: center;
 
         }
 
@@ -192,25 +146,35 @@
 
             width: 100%;
 
-            height: 300px;
+            height: 250px;
 
             object-fit: cover;
 
-            border-radius: 10px;
-
-            margin-bottom: 15px;
+            border-radius: 5px;
 
         }
 
-        /* فوتر */
+        .btn-gold {
+
+            background: var(--gold);
+
+            color: white;
+
+            border-radius: 50px;
+
+            padding: 10px 25px;
+
+            border: none;
+
+        }
 
         footer {
 
-            background-color: var(--dark-green);
+            background: var(--dark-green);
 
-            color: var(--cream-bg);
+            color: white;
 
-            padding: 60px 0;
+            padding: 40px 0;
 
             margin-top: 50px;
 
@@ -221,20 +185,17 @@
 <nav class="navbar sticky-top">
 <div class="container d-flex justify-content-between align-items-center">
 <div class="d-flex align-items-center">
-<img src="mylogo.jpg" alt="Mirzaei Logo">
-<div class="ms-3 d-none d-md-block">
-<h2 class="mb-0 fw-bold" style="letter-spacing: 3px;">MIRZAEI</h2>
-<small>BOOKSTORE</small>
-</div>
+<img src="mylogo.jpg" alt="Logo">
+<h3 class="ms-3 mb-0 fw-bold">MIRZAEI</h3>
 </div>
 <div class="d-flex align-items-center">
 <select class="form-select-sm border-warning rounded-pill me-3">
 <option>English</option>
 <option>Português</option>
-<option>فارسی</option>
+<option>Farsi</option>
 </select>
-<i class="fas fa-search fa-lg me-3"></i>
-<i class="fas fa-shopping-cart fa-lg"></i>
+<i class="fas fa-search me-3"></i>
+<i class="fas fa-shopping-cart"></i>
 </div>
 </div>
 </nav>
@@ -243,74 +204,69 @@
 <source src="https://assets.mixkit.co/videos/preview/mixkit-turning-the-pages-of-a-book-1577-large.mp4" type="video/mp4">
 </video>
 <div class="container" style="z-index: 1;">
-<h1 class="display-2 fw-bold mb-3">Onde cada livro é um mundo</h1>
-<p class="lead mb-4">Explore thousands of titles in every language, right at your fingertips.</p>
-<button class="btn-gold">START EXPLORING</button>
+<h1 class="display-3 fw-bold">Onde cada livro é um mundo</h1>
+<p class="lead mb-4">Discover thousands of books in every language.</p>
+<button class="btn-gold">Explore Collection</button>
 </div>
 </header>
-<section class="container my-5 text-center">
-<h2 class="mb-5">Popular Categories</h2>
-<div class="row">
-<div class="col-md-2 col-4">
-<div class="cat-circle"><i class="fas fa-book-open fa-2x"></i></div>
-<p>Fiction</p>
-</div>
-<div class="col-md-2 col-4">
-<div class="cat-circle"><i class="fas fa-brain fa-2x"></i></div>
-<p>Psychology</p>
-</div>
-<div class="col-md-2 col-4">
-<div class="cat-circle"><i class="fas fa-flask fa-2x"></i></div>
-<p>Science</p>
-</div>
-<div class="col-md-2 col-4">
-<div class="cat-circle"><i class="fas fa-history fa-2x"></i></div>
-<p>History</p>
-</div>
-<div class="col-md-2 col-4">
-<div class="cat-circle"><i class="fas fa-child fa-2x"></i></div>
-<p>Children</p>
-</div>
-<div class="col-md-2 col-4">
-<div class="cat-circle"><i class="fas fa-plus fa-2x"></i></div>
-<p>More</p>
+<div class="container my-5">
+<h2 class="text-center mb-5">Explore Categories</h2>
+<div class="row g-4 text-center">
+<div class="col-md-3 col-6">
+<div class="cat-box">
+<i class="fas fa-feather-alt cat-icon"></i>
+<h5>Fiction</h5>
 </div>
 </div>
-</section>
-<main class="container my-5">
+<div class="col-md-3 col-6">
+<div class="cat-box">
+<i class="fas fa-brain cat-icon"></i>
+<h5>Psychology</h5>
+</div>
+</div>
+<div class="col-md-3 col-6">
+<div class="cat-box">
+<i class="fas fa-microscope cat-icon"></i>
+<h5>Science</h5>
+</div>
+</div>
+<div class="col-md-3 col-6">
+<div class="cat-box">
+<i class="fas fa-child cat-icon"></i>
+<h5>Children</h5>
+</div>
+</div>
+</div>
+</div>
+<div class="container my-5">
 <h2 class="mb-4">Best Sellers</h2>
-<div class="row">
+<div class="row g-4">
 <div class="col-md-3">
-<div class="book-card text-center">
+<div class="book-card">
 <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400" class="book-img" alt="Book">
-<h5>The Art of War</h5>
-<p class="text-muted">Sun Tzu</p>
-<p class="fw-bold text-success">29.90 €</p>
-<button class="btn btn-sm btn-outline-dark rounded-pill">Add to Cart</button>
+<h5 class="mt-3">The Art of War</h5>
+<p class="text-muted small">Sun Tzu</p>
+<button class="btn btn-sm btn-outline-dark w-100">Add to Cart</button>
 </div>
 </div>
 <div class="col-md-3">
-<div class="book-card text-center">
+<div class="book-card">
 <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?w=400" class="book-img" alt="Book">
-<h5>Atomic Habits</h5>
-<p class="text-muted">James Clear</p>
-<p class="fw-bold text-success">24.50 €</p>
-<button class="btn btn-sm btn-outline-dark rounded-pill">Add to Cart</button>
+<h5 class="mt-3">Atomic Habits</h5>
+<p class="text-muted small">James Clear</p>
+<button class="btn btn-sm btn-outline-dark w-100">Add to Cart</button>
 </div>
 </div>
 </div>
-</main>
+</div>
 <footer class="text-center">
 <div class="container">
-<h3>MIRZAEI BOOKSTORE</h3>
-<p>Your global gateway to knowledge and imagination.</p>
-<div class="my-4">
-<i class="fab fa-instagram fa-2x mx-2"></i>
-<i class="fab fa-facebook fa-2x mx-2"></i>
-<i class="fab fa-whatsapp fa-2x mx-2"></i>
+<p>© 2026 Mirzaei Bookstore. All rights reserved.</p>
+<div class="mt-3">
+<i class="fab fa-instagram mx-2"></i>
+<i class="fab fa-telegram mx-2"></i>
+<i class="fab fa-whatsapp mx-2"></i>
 </div>
-<hr style="background: var(--gold); height: 2px; opacity: 1;">
-<p class="small">© 2026 Mirzaei Bookstore. All rights reserved.</p>
 </div>
 </footer>
 </body>
