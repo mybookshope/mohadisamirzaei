@@ -3,80 +3,316 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MIRZAEI Bookstore</title>
+<title>MIRZAEI Bookstore | Global Library</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <style>
 
-        :root { --dark-green: #1a3a32; --gold: #c5a059; --cream: #f9f7f2; }
+        /* رنگ‌بندی الهام گرفته از لوگوی شما */
 
-        body { background-color: var(--cream); font-family: 'Georgia', serif; color: var(--dark-green); margin: 0; }
+        :root {
 
-        /* Navbar */
+            --dark-green: #1a3a32;
 
-        .navbar { background: white; border-bottom: 2px solid var(--gold); padding: 10px 0; }
+            --gold: #c5a059;
 
-        .navbar-brand img { height: 60px; width: auto; border-radius: 5px; }
+            --cream-bg: #f9f7f2;
 
-        /* Video Hero Section */
+            --white: #ffffff;
+
+        }
+
+        body {
+
+            background-color: var(--cream-bg);
+
+            font-family: 'Georgia', serif;
+
+            color: var(--dark-green);
+
+            margin: 0;
+
+            overflow-x: hidden;
+
+        }
+
+        /* هدر لوکس */
+
+        .navbar {
+
+            background-color: var(--white) !important;
+
+            border-bottom: 2px solid var(--gold);
+
+            padding: 10px 0;
+
+        }
+
+        .navbar-brand img {
+
+            height: 80px; /* لوگوی شما */
+
+            width: auto;
+
+        }
+
+        /* بخش ویدیو (Hero Section) */
 
         .hero-video {
 
-            position: relative; height: 70vh; overflow: hidden;
+            position: relative;
 
-            display: flex; align-items: center; justify-content: center; color: white; text-align: center;
+            height: 75vh;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: white;
+
+            text-align: center;
 
         }
 
         .hero-video video {
 
-            position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%;
+            position: absolute;
 
-            width: auto; height: auto; z-index: -1; transform: translate(-50%, -50%);
+            top: 50%;
+
+            left: 50%;
+
+            min-width: 100%;
+
+            min-height: 100%;
+
+            z-index: -1;
+
+            transform: translate(-50%, -50%);
 
             filter: brightness(0.4);
 
         }
 
-        .hero-content h1 { font-size: 3.5rem; font-weight: bold; margin-bottom: 20px; }
+        /* دکمه‌ها */
 
-        .btn-explore { background: var(--gold); color: white; border-radius: 50px; padding: 12px 40px; border: none; font-weight: bold; transition: 0.3s; }
+        .btn-gold {
 
-        .btn-explore:hover { background: var(--dark-green); transform: scale(1.05); }
+            background-color: var(--gold);
+
+            color: white;
+
+            border-radius: 50px;
+
+            padding: 12px 35px;
+
+            font-weight: bold;
+
+            border: none;
+
+            transition: 0.3s;
+
+        }
+
+        .btn-gold:hover {
+
+            background-color: var(--dark-green);
+
+            transform: translateY(-3px);
+
+        }
+
+        /* بخش دسته‌بندی‌ها (دایره‌ای مشابه عکس ارسالی) */
+
+        .cat-circle {
+
+            width: 100px;
+
+            height: 100px;
+
+            background: white;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin: 0 auto 15px;
+
+            border: 1px solid #eee;
+
+            transition: 0.3s;
+
+            color: var(--dark-green);
+
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+
+        }
+
+        .cat-circle:hover {
+
+            border-color: var(--gold);
+
+            color: var(--gold);
+
+        }
+
+        /* کارت‌های کتاب */
+
+        .book-card {
+
+            background: white;
+
+            border: none;
+
+            border-radius: 15px;
+
+            padding: 20px;
+
+            transition: 0.3s;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+
+            margin-bottom: 30px;
+
+        }
+
+        .book-card:hover {
+
+            transform: translateY(-10px);
+
+        }
+
+        .book-img {
+
+            width: 100%;
+
+            height: 300px;
+
+            object-fit: cover;
+
+            border-radius: 10px;
+
+            margin-bottom: 15px;
+
+        }
+
+        /* فوتر */
+
+        footer {
+
+            background-color: var(--dark-green);
+
+            color: var(--cream-bg);
+
+            padding: 60px 0;
+
+            margin-top: 50px;
+
+        }
 </style>
 </head>
 <body>
 <nav class="navbar sticky-top">
 <div class="container d-flex justify-content-between align-items-center">
 <div class="d-flex align-items-center">
-<img src="mylogo.jpg" alt="Mirzaei Bookstore Logo">
-<h3 class="ms-3 mb-0 fw-bold" style="letter-spacing: 2px;">MIRZAEI</h3>
+<img src="mylogo.jpg" alt="Mirzaei Logo">
+<div class="ms-3 d-none d-md-block">
+<h2 class="mb-0 fw-bold" style="letter-spacing: 3px;">MIRZAEI</h2>
+<small>BOOKSTORE</small>
 </div>
-<div>
-<select class="form-select form-select-sm border-warning rounded-pill">
+</div>
+<div class="d-flex align-items-center">
+<select class="form-select-sm border-warning rounded-pill me-3">
 <option>English</option>
 <option>Português</option>
-<option>Farsi</option>
-<option>العربية</option>
+<option>فارسی</option>
 </select>
+<i class="fas fa-search fa-lg me-3"></i>
+<i class="fas fa-shopping-cart fa-lg"></i>
 </div>
 </div>
 </nav>
 <header class="hero-video">
 <video autoplay muted loop playsinline>
-<source src="https://assets.mixkit.co/videos/preview/mixkit-hand-holding-a-book-over-a-table-4513-large.mp4" type="video/mp4">
+<source src="https://assets.mixkit.co/videos/preview/mixkit-turning-the-pages-of-a-book-1577-large.mp4" type="video/mp4">
 </video>
-<div class="hero-content">
-<h1>Onde cada livro é um mundo</h1>
-<p class="lead mb-4">Explore thousands of books from all over the globe.</p>
-<button class="btn-explore">START EXPLORING</button>
+<div class="container" style="z-index: 1;">
+<h1 class="display-2 fw-bold mb-3">Onde cada livro é um mundo</h1>
+<p class="lead mb-4">Explore thousands of titles in every language, right at your fingertips.</p>
+<button class="btn-gold">START EXPLORING</button>
 </div>
 </header>
-<div class="container my-5 text-center">
-<h2 class="mb-5" style="border-bottom: 2px solid var(--gold); display: inline-block; padding-bottom: 10px;">Our Global Collection</h2>
-<div class="row g-4">
-<p class="text-muted">Thousands of titles coming soon in every language...</p>
+<section class="container my-5 text-center">
+<h2 class="mb-5">Popular Categories</h2>
+<div class="row">
+<div class="col-md-2 col-4">
+<div class="cat-circle"><i class="fas fa-book-open fa-2x"></i></div>
+<p>Fiction</p>
+</div>
+<div class="col-md-2 col-4">
+<div class="cat-circle"><i class="fas fa-brain fa-2x"></i></div>
+<p>Psychology</p>
+</div>
+<div class="col-md-2 col-4">
+<div class="cat-circle"><i class="fas fa-flask fa-2x"></i></div>
+<p>Science</p>
+</div>
+<div class="col-md-2 col-4">
+<div class="cat-circle"><i class="fas fa-history fa-2x"></i></div>
+<p>History</p>
+</div>
+<div class="col-md-2 col-4">
+<div class="cat-circle"><i class="fas fa-child fa-2x"></i></div>
+<p>Children</p>
+</div>
+<div class="col-md-2 col-4">
+<div class="cat-circle"><i class="fas fa-plus fa-2x"></i></div>
+<p>More</p>
 </div>
 </div>
+</section>
+<main class="container my-5">
+<h2 class="mb-4">Best Sellers</h2>
+<div class="row">
+<div class="col-md-3">
+<div class="book-card text-center">
+<img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400" class="book-img" alt="Book">
+<h5>The Art of War</h5>
+<p class="text-muted">Sun Tzu</p>
+<p class="fw-bold text-success">29.90 €</p>
+<button class="btn btn-sm btn-outline-dark rounded-pill">Add to Cart</button>
+</div>
+</div>
+<div class="col-md-3">
+<div class="book-card text-center">
+<img src="https://images.unsplash.com/photo-1589998059171-988d887df646?w=400" class="book-img" alt="Book">
+<h5>Atomic Habits</h5>
+<p class="text-muted">James Clear</p>
+<p class="fw-bold text-success">24.50 €</p>
+<button class="btn btn-sm btn-outline-dark rounded-pill">Add to Cart</button>
+</div>
+</div>
+</div>
+</main>
+<footer class="text-center">
+<div class="container">
+<h3>MIRZAEI BOOKSTORE</h3>
+<p>Your global gateway to knowledge and imagination.</p>
+<div class="my-4">
+<i class="fab fa-instagram fa-2x mx-2"></i>
+<i class="fab fa-facebook fa-2x mx-2"></i>
+<i class="fab fa-whatsapp fa-2x mx-2"></i>
+</div>
+<hr style="background: var(--gold); height: 2px; opacity: 1;">
+<p class="small">© 2026 Mirzaei Bookstore. All rights reserved.</p>
+</div>
+</footer>
 </body>
 </html>
  
