@@ -3,211 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MIRZAEI BOOKSTORE | Online Shop</title>
+    <title>MIRZAEI BOOKSTORE | Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root {
-            --green: #0f3d2e;
-            --gold: #b8863b;
-            --cream: #faf7f0;
-            --sale-red: #d32f2f;
-        }
-
-        body { font-family: 'Segoe UI', sans-serif; background-color: var(--cream); color: #333; }
-
-        /* Top Notification Bar (AwesomeBooks Style) */
-        .promo-banner { background: var(--sale-red); color: white; text-align: center; padding: 6px; font-weight: 600; font-size: 14px; }
-        
-        /* Navigation */
-        .navbar { background: white; border-bottom: 3px solid var(--gold); padding: 10px 0; }
-        .navbar-brand img { height: 75px; width: auto; }
-        .search-box { border-radius: 25px 0 0 25px; border: 2px solid #ddd; }
-        .search-btn { border-radius: 0 25px 25px 0; background: var(--green); color: white; border: none; padding: 0 20px; }
-
-        /* Sidebar & Filters */
-        .sidebar { background: white; padding: 20px; border-radius: 12px; border: 1px solid #eee; position: sticky; top: 100px; }
-        .sidebar h6 { font-weight: bold; color: var(--green); margin-bottom: 15px; }
-        .filter-link { display: block; color: #555; text-decoration: none; padding: 5px 0; transition: 0.2s; }
-        .filter-link:hover { color: var(--gold); padding-left: 5px; }
-
-        /* Book Grid Style */
-        .book-card {
-            background: white; border: 1px solid #eee; border-radius: 10px;
-            transition: 0.3s; position: relative; overflow: hidden; height: 100%;
-        }
-        .book-card:hover { transform: translateY(-8px); box-shadow: 0 12px 25px rgba(0,0,0,0.1); }
-        .book-image { height: 260px; width: 100%; object-fit: cover; }
-        .badge-sale { position: absolute; top: 10px; right: 10px; background: var(--sale-red); color: white; padding: 4px 10px; border-radius: 5px; font-weight: bold; }
-        .book-info { padding: 15px; text-align: center; }
-        .price-old { text-decoration: line-through; color: #999; font-size: 14px; margin-right: 8px; }
-        .price-new { color: var(--sale-red); font-size: 20px; font-weight: bold; }
-
-        /* Footer */
-        footer { background: var(--green); color: white; padding: 60px 0 20px; margin-top: 80px; }
-        .footer-link { color: #ccc; text-decoration: none; display: block; margin-bottom: 8px; }
-        .footer-link:hover { color: var(--gold); }
+        :root { --green: #0f3d2e; --gold: #b8863b; --cream: #faf7f0; }
+        body { background: var(--cream); font-family: sans-serif; }
+        .promo { background: #d32f2f; color: white; text-align: center; padding: 5px; font-size: 13px; font-weight: bold; }
+        .navbar { background: white; border-bottom: 3px solid var(--gold); }
+        .navbar-brand img { height: 70px; }
+        .book-card { background: white; border-radius: 10px; overflow: hidden; transition: 0.3s; border: 1px solid #eee; }
+        .book-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .price-new { color: #d32f2f; font-weight: bold; font-size: 18px; }
+        footer { background: var(--green); color: white; padding: 40px 0; margin-top: 50px; }
     </style>
 </head>
 <body>
-
-    <div class="promo-banner">🔥 SPRING SALE: Get 20% OFF your next order with code: MIRZAEI20</div>
-
+    <div class="promo">FLASH SALE: 50% OFF ON ALL USED BOOKS!</div>
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="mylogo.jpg" alt="MIRZAEI Bookstore Logo">
-            </a>
-
-            <div class="flex-grow-1 mx-lg-5 my-3 my-lg-0">
-                <div class="input-group">
-                    <input type="text" class="form-control search-box" placeholder="Search by title, author, or ISBN...">
-                    <button class="search-btn"><i class="fas fa-search"></i></button>
-                </div>
-            </div>
-
-            <div class="d-flex align-items-center gap-3">
-                <a href="#" class="text-dark text-decoration-none d-none d-md-block"><i class="far fa-heart fa-lg"></i> Wishlist</a>
-                <a href="#" class="text-dark text-decoration-none"><i class="fas fa-shopping-basket fa-lg"></i> <b>Cart (0)</b></a>
+            <a class="navbar-brand" href="index.html"><img src="mylogo.jpg" alt="Logo"></a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link fw-bold" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
     <div class="container mt-5">
         <div class="row">
-            <aside class="col-lg-3 d-none d-lg-block">
-                <div class="sidebar">
-                    <h6>SHOP BY CATEGORY</h6>
-                    <a href="#" class="filter-link">Fiction & Literature</a>
-                    <a href="#" class="filter-link text-danger fw-bold">Bargain Books (Sale)</a>
-                    <a href="#" class="filter-link">Children's Collection</a>
-                    <a href="#" class="filter-link">Psychology & Self-Help</a>
-                    <a href="#" class="filter-link">History & Biography</a>
-                    <hr>
-                    <h6>FORMAT</h6>
-                    <label class="d-block small"><input type="checkbox"> Hardback</label>
-                    <label class="d-block small"><input type="checkbox"> Paperback</label>
-                    <label class="d-block small"><input type="checkbox"> Used Copies</label>
-                    <hr>
-                    <h6>ABOUT MIRZAEI</h6>
-                    <a href="#" class="filter-link">Our Story</a>
-                    <a href="#" class="filter-link">Affiliate Program</a>
-                    <a href="#" class="filter-link">Contact Us</a>
-                </div>
-            </aside>
-
-            <main class="col-lg-9">
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h2 class="fw-bold">Bargain Books & Offers</h2>
-                    <select class="form-select w-25">
-                        <option>Sort by: Most Popular</option>
-                        <option>Price: Low to High</option>
-                        <option>Newest Arrivals</option>
-                    </select>
-                </div>
-
-                <div class="row g-4">
-                    <div class="col-6 col-md-4 col-xl-3">
-                        <div class="book-card">
-                            <span class="badge-sale">Save 40%</span>
-                            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400" class="book-image">
-                            <div class="book-info">
-                                <h6 class="mb-1 text-truncate">Atomic Habits</h6>
-                                <p class="small text-muted mb-2">James Clear</p>
-                                <span class="price-old">€22</span><span class="price-new">€13.20</span>
-                                <button class="btn btn-sm btn-outline-dark w-100 mt-2">Add to Basket</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-xl-3">
-                        <div class="book-card">
-                            <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?w=400" class="book-image">
-                            <div class="book-info">
-                                <h6 class="mb-1 text-truncate">The Alchemist</h6>
-                                <p class="small text-muted mb-2">Paulo Coelho</p>
-                                <span class="price-new">€11.00</span>
-                                <button class="btn btn-sm btn-outline-dark w-100 mt-2">Add to Basket</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-xl-3">
-                        <div class="book-card">
-                            <span class="badge-sale">Bargain</span>
-                            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400" class="book-image">
-                            <div class="book-info">
-                                <h6 class="mb-1 text-truncate">Sapiens</h6>
-                                <p class="small text-muted mb-2">Yuval Noah Harari</p>
-                                <span class="price-old">€19</span><span class="price-new">€14.00</span>
-                                <button class="btn btn-sm btn-outline-dark w-100 mt-2">Add to Basket</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-xl-3">
-                        <div class="book-card">
-                            <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=400" class="book-image">
-                            <div class="book-info">
-                                <h6 class="mb-1 text-truncate">Deep Work</h6>
-                                <p class="small text-muted mb-2">Cal Newport</p>
-                                <span class="price-new">€16.50</span>
-                                <button class="btn btn-sm btn-outline-dark w-100 mt-2">Add to Basket</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <nav class="mt-5">
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <div class="col-md-3">
+                <div class="p-3 bg-white rounded shadow-sm">
+                    <h5>Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark text-decoration-none">Fiction</a></li>
+                        <li><a href="#" class="text-danger fw-bold text-decoration-none">Bargain Books</a></li>
+                        <li><a href="#" class="text-dark text-decoration-none">Children</a></li>
                     </ul>
-                </nav>
-            </main>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <h2 class="mb-4">Featured Books</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="book-card">
+                            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400" class="w-100" alt="Book">
+                            <div class="p-3">
+                                <h6>The Art of Thinking</h6>
+                                <p class="price-new">€12.50</p>
+                                <button class="btn btn-dark btn-sm w-100">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 mb-4">
-                    <h5 class="fw-bold mb-3">MIRZAEI BOOKSTORE</h5>
-                    <p class="small">"Onde Cada Livro É Um Mundo" - We provide thousands of books worldwide, focusing on quality and affordability.</p>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <h6>CUSTOMER SERVICES</h6>
-                    <a href="#" class="footer-link">Track My Order</a>
-                    <a href="#" class="footer-link">Returns Policy</a>
-                    <a href="#" class="footer-link">Shipping Rates</a>
-                    <a href="#" class="footer-link">FAQs</a>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <h6>COMPANY INFO</h6>
-                    <a href="#" class="footer-link">About Mirzaei</a>
-                    <a href="#" class="footer-link">Terms & Conditions</a>
-                    <a href="#" class="footer-link">Privacy Policy</a>
-                    <a href="#" class="footer-link">Contact Us</a>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <h6>FOLLOW OUR JOURNEY</h6>
-                    <div class="d-flex gap-3 mb-3">
-                        <a href="https://instagram.com/sahar.art.official10" target="_blank" class="text-white"><i class="fab fa-instagram fa-xl"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-facebook fa-xl"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-whatsapp fa-xl"></i></a>
-                    </div>
-                    <p class="small">Payment Methods:</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" height="20" class="me-2">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" height="15">
-                </div>
-            </div>
-            <hr class="mt-4 opacity-25">
-            <p class="text-center small mb-0">© 2026 MIRZAEI Bookstore. Every Book is a World.</p>
+        <div class="container text-center">
+            <p>© 2026 MIRZAEI BOOKSTORE | Lisbon, Portugal</p>
         </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
