@@ -2,199 +2,45 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MIRZAEI BOOKSTORE | Online Shop</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<style>
-
-        :root {
-
-            --dark-green: #0f3d2e; /* رنگ سبز تیره لوگوی شما */
-
-            --gold: #b8863b;      /* رنگ طلایی لوکس */
-
-            --cream: #faf7f0;     /* رنگ پس‌زمینه کرم */
-
-        }
-
-        body { background-color: var(--cream); font-family: 'Georgia', serif; color: var(--dark-green); }
-
-        /* نوار بالای سایت - زبان و ارسال */
-
-        .top-nav { background: var(--dark-green); color: white; padding: 10px 0; font-size: 13px; }
-
-        /* هدر اصلی */
-
-        .main-header { background: white; border-bottom: 3px solid var(--gold); padding: 15px 0; }
-
-        .logo-img { height: 100px; width: auto; }
-
-        /* منوی ناوبری */
-
-        .nav-link { color: var(--dark-green) !important; font-weight: bold; text-transform: uppercase; margin: 0 10px; }
-
-        .nav-link:hover { color: var(--gold) !important; }
-
-        /* بخش کتاب‌ها (مشابه AwesomeBooks) */
-
-        .book-card { 
-
-            background: white; border: 1px solid #e0e0e0; border-radius: 8px; 
-
-            overflow: hidden; transition: 0.3s; height: 100%; position: relative;
-
-        }
-
-        .book-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-
-        .badge-sale { position: absolute; top: 10px; left: 10px; background: #d32f2f; color: white; padding: 5px 10px; border-radius: 4px; font-size: 12px; }
-
-        .book-img { height: 280px; width: 100%; object-fit: cover; }
-
-        /* فوتر و لوکیشن */
-
-        footer { background: var(--dark-green); color: white; padding: 60px 0; margin-top: 50px; }
-
-        .map-container iframe { width: 100%; height: 250px; border-radius: 15px; border: 2px solid var(--gold); }
-</style>
+<link rel="stylesheet" href="assets/css/style.css">
+<title>MIRZAEI | Books, Games & Videos</title>
 </head>
 <body>
-<div class="top-nav">
-<div class="container d-flex justify-content-between align-items-center">
-<div><i class="fas fa-truck"></i> FREE WORLDWIDE DELIVERY OVER €49</div>
-<div class="d-flex align-items-center">
-<span class="me-2">Language:</span>
-<select class="bg-transparent text-white border-1 rounded">
-<option class="text-dark">English</option>
-<option class="text-dark">Portuguese (PT)</option>
-<option class="text-dark">Persian (FA)</option>
-<option class="text-dark">French (FR)</option>
-</select>
-</div>
-</div>
-</div>
-<header class="main-header sticky-top">
-<div class="container">
-<div class="row align-items-center">
-<div class="col-md-3">
-<a href="index.html">
-<img src="my logo.jpg" alt="MIRZAEI BOOKSTORE" class="logo-img">
-</a>
-</div>
-<div class="col-md-6">
-<div class="input-group">
-<input type="text" class="form-control" placeholder="Search by Title, Author or ISBN...">
-<button class="btn btn-outline-success" style="background: var(--dark-green); color: white;"><i class="fas fa-search"></i></button>
-</div>
-</div>
-<div class="col-md-3 text-end">
-<a href="#" class="text-decoration-none me-3"><i class="fas fa-user fa-lg text-success"></i></a>
-<a href="#" class="text-decoration-none position-relative">
-<i class="fas fa-shopping-cart fa-lg text-success"></i>
-<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
-</a>
-</div>
-</div>
-</div>
-</header>
+<div class="promo-bar">GET 20% OFF YOUR FIRST ORDER! | SHIP TO PT 🇵🇹</div>
 <nav class="navbar navbar-expand-lg">
 <div class="container">
-<div class="collapse navbar-collapse justify-content-center">
-<ul class="navbar-nav">
-<li class="nav-item"><a class="nav-link" href="#">Bestsellers</a></li>
-<li class="nav-item"><a class="nav-link" href="#">Bargain Shop</a></li>
-<li class="nav-item"><a class="nav-link" href="#">New Arrivals</a></li>
-<li class="nav-item"><a class="nav-link" href="#">Used Books</a></li>
-<li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-</ul>
+<a href="index.html"><img src="my logo.jpg" height="70"></a>
+<div class="ms-auto d-flex gap-4">
+<a href="index.html" class="text-dark fw-bold text-decoration-none">Home</a>
+<a href="books/index.html" class="text-dark text-decoration-none">Shop</a>
+<a href="videos/index.html" class="text-dark text-decoration-none">Videos</a>
+<a href="games/index.html" class="text-dark text-decoration-none">Games</a>
 </div>
 </div>
 </nav>
-<main class="container my-5">
-<div class="row mb-4">
-<div class="col-12 border-bottom pb-2 d-flex justify-content-between">
-<h2 class="fw-bold">Today's Bargains</h2>
-<a href="#" class="text-success fw-bold">View All →</a>
-</div>
-</div>
-<div class="row g-4">
-<div class="col-md-3">
-<div class="book-card">
-<span class="badge-sale">SAVE 40%</span>
-<img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400" class="book-img" alt="Book">
-<div class="p-3">
-<h6 class="fw-bold mb-1">Atomic Habits</h6>
-<p class="small text-muted mb-2">James Clear</p>
-<div class="d-flex justify-content-between align-items-center">
-<span class="text-danger fw-bold">€12.99</span>
-<button class="btn btn-sm btn-success"><i class="fas fa-plus"></i> Add</button>
+<div class="container mt-5">
+<div class="row align-items-center mb-5">
+<div class="col-md-7">
+<div class="video-box">
+<h3 class="mb-3">New Book Trailer</h3>
+<div class="ratio ratio-16x9">
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
 </div>
 </div>
 </div>
-</div>
-<div class="col-md-3">
-<div class="book-card">
-<img src="https://images.unsplash.com/photo-1589998059171-988d887df646?w=400" class="book-img" alt="Book">
-<div class="p-3">
-<h6 class="fw-bold mb-1">The Alchemist</h6>
-<p class="small text-muted mb-2">Paulo Coelho</p>
-<div class="d-flex justify-content-between align-items-center">
-<span class="fw-bold">€18.00</span>
-<button class="btn btn-sm btn-success"><i class="fas fa-plus"></i> Add</button>
+<div class="col-md-5">
+<h2 class="fw-bold">Watch & Learn</h2>
+<p>Check out our latest video reviews and interviews with your favorite authors.</p>
+<a href="videos/index.html" class="btn btn-main">Watch All Videos</a>
 </div>
 </div>
+<div class="game-card shadow-lg">
+<h1 class="display-4 text-warning">Bookworm Quiz 🎮</h1>
+<p class="fs-4">Test your knowledge and win a free physical book!</p>
+<a href="games/index.html" class="btn btn-light btn-lg rounded-pill fw-bold">PLAY NOW</a>
 </div>
 </div>
-<div class="col-md-3">
-<div class="book-card">
-<span class="badge-sale">USED - GOOD</span>
-<img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400" class="book-img" alt="Book">
-<div class="p-3">
-<h6 class="fw-bold mb-1">Classic Tales</h6>
-<p class="small text-muted mb-2">Multiple Authors</p>
-<div class="d-flex justify-content-between align-items-center">
-<span class="text-danger fw-bold">€5.50</span>
-<button class="btn btn-sm btn-success"><i class="fas fa-plus"></i> Add</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</main>
-<footer>
-<div class="container">
-<div class="row g-5">
-<div class="col-md-4">
-<h4 class="fw-bold text-warning mb-4">MIRZAEI Bookstore</h4>
-<p>Visit our flagship store in Lisbon, Portugal. Experience the world of luxury reading.</p>
-<div class="d-flex gap-3 fs-3">
-<i class="fab fa-instagram"></i>
-<i class="fab fa-whatsapp"></i>
-<i class="fab fa-facebook"></i>
-</div>
-</div>
-<div class="col-md-4">
-<h5 class="mb-4">Quick Links</h5>
-<ul class="list-unstyled">
-<li><a href="#" class="text-white text-decoration-none small">Terms & Conditions</a></li>
-<li><a href="#" class="text-white text-decoration-none small">Privacy Policy</a></li>
-<li><a href="#" class="text-white text-decoration-none small">Track Your Order</a></li>
-</ul>
-</div>
-<div class="col-md-4">
-<h5 class="mb-4">Our Location</h5>
-<div class="map-container">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d199197.518683526!2d-9.286780!3d38.743605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19331a61e4f33b%3A0x400ebbde49036d0!2sLisbon%2C%20Portugal!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"></iframe>
-</div>
-</div>
-</div>
-<hr class="my-5">
-<p class="text-center small">© 2026 MIRZAEI BOOKSTORE. All Rights Reserved. | Lisbon, Portugal</p>
-</div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
  
