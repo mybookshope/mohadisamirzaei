@@ -1,0 +1,30 @@
+:root {
+
+    --green: #0f3d2e;
+
+    --gold: #b8863b;
+
+    --cream: #faf7f0;
+
+    --white: #ffffff;
+
+}
+
+body { background: var(--cream); font-family: 'Segoe UI', sans-serif; color: var(--green); }
+
+/* نوار قرمز بالای AwesomeBooks */
+
+.promo-bar { background: #d32f2f; color: white; text-align: center; padding: 5px; font-weight: bold; font-size: 14px; }
+
+.navbar { background: white; border-bottom: 3px solid var(--gold); padding: 15px 0; }
+
+.btn-main { background: var(--green); color: white; border-radius: 30px; padding: 10px 25px; border: none; font-weight: bold; }
+
+.btn-main:hover { background: var(--gold); }
+
+/* بخش ویدیو و گیم */
+
+.video-box { border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); background: white; padding: 15px; }
+
+.game-card { background: var(--green); color: white; border-radius: 20px; padding: 40px; text-align: center; }
+ 
