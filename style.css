@@ -1,17 +1,3 @@
-:root {
-
-    --mirzaei-green: #0f3d2e;
-
-    --mirzaei-gold: #b8863b;
-
-    --mirzaei-cream: #faf7f0;
-
-    --white: #ffffff;
-
-    --dark: #1f1f1f;
-
-}
-
 * {
 
     margin: 0;
@@ -24,383 +10,259 @@
 
 body {
 
-    font-family: Arial, sans-serif;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 
-    background: var(--mirzaei-cream);
+    background-color: #faf8f3;
 
-    color: var(--dark);
+    color: #2c2b28;
+
+    line-height: 1.5;
 
 }
 
-/* TOP BAR */
+header {
 
-.top-bar {
-
-    background: var(--mirzaei-green);
+    background-color: #1e3a2f;
 
     color: white;
 
-    text-align: center;
-
-    padding: 14px;
-
-    font-size: 14px;
-
-}
-
-/* NAVBAR */
-
-.navbar {
+    padding: 1rem 2rem;
 
     display: flex;
 
     justify-content: space-between;
 
     align-items: center;
-
-    padding: 30px 80px;
-
-    background: white;
-
-    box-shadow: 0 8px 20px rgba(0,0,0,0.04);
-
-}
-
-.logo-small img {
-
-    height: 90px;
-
-}
-
-.menu {
-
-    display: flex;
-
-    list-style: none;
-
-    gap: 30px;
-
-}
-
-.menu a {
-
-    text-decoration: none;
-
-    color: var(--mirzaei-green);
-
-    font-weight: bold;
-
-    transition: 0.3s;
-
-}
-
-.menu a:hover {
-
-    color: var(--mirzaei-gold);
-
-}
-
-/* HERO SECTION */
-
-.hero {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    padding: 90px 80px;
-
-    min-height: 85vh;
-
-}
-
-.hero-left {
-
-    width: 50%;
-
-}
-
-.hero-left h1 {
-
-    font-size: 72px;
-
-    color: var(--mirzaei-green);
-
-    line-height: 1.1;
-
-    margin-bottom: 20px;
-
-}
-
-.hero-left p {
-
-    font-size: 22px;
-
-    line-height: 1.7;
-
-    margin-bottom: 30px;
-
-}
-
-.hero-right {
-
-    width: 45%;
-
-    text-align: center;
-
-}
-
-.hero-right img {
-
-    width: 100%;
-
-    max-width: 520px;
-
-}
-
-/* BUTTON */
-
-.btn-main {
-
-    display: inline-block;
-
-    background: var(--mirzaei-green);
-
-    color: white;
-
-    padding: 15px 35px;
-
-    border-radius: 50px;
-
-    text-decoration: none;
-
-    font-weight: bold;
-
-    transition: 0.3s;
-
-}
-
-.btn-main:hover {
-
-    background: var(--mirzaei-gold);
-
-}
-
-/* SECTIONS */
-
-.categories,
-
-.books,
-
-.instagram-section,
-
-.reviews {
-
-    padding: 80px;
-
-    text-align: center;
-
-}
-
-h2 {
-
-    font-size: 42px;
-
-    margin-bottom: 40px;
-
-    color: var(--mirzaei-green);
-
-}
-
-/* GRID */
-
-.category-grid,
-
-.book-grid {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 30px;
 
     flex-wrap: wrap;
 
 }
 
-/* CARDS */
+.logo {
 
-.category-card,
+    display: flex;
 
-.book-card,
+    align-items: center;
 
-.review-box {
+    gap: 1rem;
 
-    background: white;
+}
 
-    padding: 30px;
+.logo img {
 
-    border-radius: 20px;
+    width: 50px;
 
-    width: 280px;
+    height: 50px;
 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    object-fit: contain;
+
+}
+
+.logo h1 {
+
+    font-size: 1.5rem;
+
+    font-weight: normal;
+
+}
+
+.logo span {
+
+    font-weight: bold;
+
+}
+
+nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    margin-left: 1.5rem;
+
+    padding: 0.5rem;
 
     transition: 0.3s;
 
 }
 
-.category-card:hover,
+nav a:hover {
 
-.book-card:hover,
+    background-color: #2d5a48;
 
-.review-box:hover {
-
-    transform: translateY(-8px);
+    border-radius: 5px;
 
 }
 
-.category-card h3,
+main {
 
-.book-card h3 {
+    min-height: 70vh;
 
-    color: var(--mirzaei-green);
-
-    margin-bottom: 15px;
+    padding: 3rem 2rem;
 
 }
 
-/* BOOKS */
+.hero {
 
-.book-card img {
+    text-align: center;
 
-    width: 100%;
+    background: linear-gradient(135deg, #e8dcc8 0%, #d4c4a8 100%);
 
-    border-radius: 15px;
+    padding: 4rem 2rem;
 
-    margin-bottom: 15px;
+    border-radius: 20px;
 
-}
+    max-width: 900px;
 
-.book-card p {
-
-    font-size: 20px;
-
-    color: var(--mirzaei-gold);
-
-    font-weight: bold;
+    margin: 0 auto;
 
 }
 
-.book-card a {
+.hero h2 {
 
-    display: inline-block;
+    font-size: 3rem;
 
-    margin-top: 15px;
+    margin-bottom: 1rem;
+
+    color: #1e3a2f;
+
+}
+
+.hero p {
+
+    font-size: 1.2rem;
+
+    margin-bottom: 2rem;
+
+}
+
+.btn {
+
+    background-color: #1e3a2f;
+
+    color: white;
+
+    padding: 0.8rem 2rem;
 
     text-decoration: none;
 
-    color: var(--mirzaei-green);
+    border-radius: 30px;
 
-    font-weight: bold;
+    display: inline-block;
 
-}
-
-.book-card a:hover {
-
-    color: var(--mirzaei-gold);
+    transition: 0.3s;
 
 }
 
-/* INSTAGRAM */
+.btn:hover {
 
-.instagram-section p {
+    background-color: #2d5a48;
 
-    font-size: 22px;
-
-    margin-bottom: 30px;
+    transform: scale(1.05);
 
 }
 
-/* FOOTER */
+.collection, .about, .contact {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    background: white;
+
+    padding: 2rem;
+
+    border-radius: 20px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+}
+
+.collection h2, .about h2, .contact h2 {
+
+    color: #1e3a2f;
+
+    margin-bottom: 1.5rem;
+
+    border-bottom: 3px solid #d4c4a8;
+
+    padding-bottom: 0.5rem;
+
+}
+
+.books {
+
+    display: flex;
+
+    gap: 2rem;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+}
+
+.book {
+
+    background: #f0ebe0;
+
+    padding: 2rem;
+
+    border-radius: 15px;
+
+    font-size: 1.2rem;
+
+    min-width: 150px;
+
+    text-align: center;
+
+}
+
+.contact p {
+
+    margin: 1rem 0;
+
+    padding: 0.5rem;
+
+    background: #f9f7f2;
+
+    border-radius: 8px;
+
+}
 
 footer {
 
-    background: var(--mirzaei-green);
+    background-color: #1e3a2f;
 
     color: white;
 
     text-align: center;
 
-    padding: 70px 20px;
+    padding: 1.5rem;
 
-    line-height: 2;
-
-}
-
-footer h3 {
-
-    margin-bottom: 20px;
+    margin-top: 2rem;
 
 }
 
-/* MOBILE */
+@media (max-width: 768px) {
 
-@media(max-width: 992px) {
-
-    .hero {
+    header {
 
         flex-direction: column;
 
-        text-align: center;
-
-        padding: 60px 30px;
+        gap: 1rem;
 
     }
 
-    .hero-left,
+    nav a {
 
-    .hero-right {
-
-        width: 100%;
+        margin: 0 0.5rem;
 
     }
 
-    .hero-left h1 {
+    .hero h2 {
 
-        font-size: 48px;
-
-    }
-
-    .navbar {
-
-        flex-direction: column;
-
-        padding: 30px;
-
-        gap: 20px;
-
-    }
-
-    .menu {
-
-        flex-wrap: wrap;
-
-        justify-content: center;
-
-    }
-
-    .categories,
-
-    .books,
-
-    .instagram-section,
-
-    .reviews {
-
-        padding: 60px 30px;
+        font-size: 2rem;
 
     }
 
