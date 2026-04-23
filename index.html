@@ -1,106 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Professional BookShop</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<title>Mirzaei Bookstore | خانه</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- Header -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-<div class="container">
-<a class="navbar-brand" href="#">BookShop</a>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-<ul class="navbar-nav">
-<li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-<li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
-<li class="nav-item"><a class="nav-link" href="#books">Books</a></li>
-<li class="nav-item"><a class="nav-link" href="#cart">Cart</a></li>
-</ul>
+<header>
+<div class="logo">
+<img src="mylogo.png" alt="Logo">
+<h1>MIRZAEI <span>— BOOKSTORE —</span></h1>
 </div>
-</div>
+<nav>
+<a href="index.html">Home</a>
+<a href="collection.html">Collection</a>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
+<a href="https://www.instagram.com/mirzaei_bookstore_official" target="_blank">Instagram</a>
 </nav>
-<!-- Carousel -->
-<div id="carouselBooks" class="carousel slide mt-3" data-bs-ride="carousel">
-<div class="carousel-inner">
-<div class="carousel-item active">
-<img src="images/book1.jpg" class="d-block w-100" alt="Book 1">
-<div class="carousel-caption d-none d-md-block">
-<h5>Top Seller 1</h5>
-</div>
-</div>
-<div class="carousel-item">
-<img src="images/book2.jpg" class="d-block w-100" alt="Book 2">
-<div class="carousel-caption d-none d-md-block">
-<h5>Top Seller 2</h5>
-</div>
-</div>
-</div>
-<button class="carousel-control-prev" type="button" data-bs-target="#carouselBooks" data-bs-slide="prev">
-<span class="carousel-control-prev-icon"></span>
-</button>
-<button class="carousel-control-next" type="button" data-bs-target="#carouselBooks" data-bs-slide="next">
-<span class="carousel-control-next-icon"></span>
-</button>
-</div>
-<!-- Categories -->
-<section id="categories" class="container my-5">
-<h2 class="mb-4">Categories</h2>
-<div class="row text-center">
-<div class="col-md-3 mb-3"><div class="category-card p-3 border rounded">Fiction</div></div>
-<div class="col-md-3 mb-3"><div class="category-card p-3 border rounded">Science</div></div>
-<div class="col-md-3 mb-3"><div class="category-card p-3 border rounded">History</div></div>
-<div class="col-md-3 mb-3"><div class="category-card p-3 border rounded">Children</div></div>
-</div>
+</header>
+<main>
+<section class="hero">
+<h2>Every Book, <br> A New World</h2>
+<p>Welcome to MIRZAEI BOOKSTORE<br>Onde Cada Livro É Um Mundo</p>
+<a href="collection.html" class="btn">Explore Books</a>
 </section>
-<!-- Books -->
-<section id="books" class="container my-5">
-<h2 class="mb-4">Books</h2>
-<div class="row">
-<div class="col-md-3 mb-4">
-<div class="card book-card h-100">
-<img src="images/book1.jpg" class="card-img-top" alt="Book 1">
-<div class="card-body">
-<h5 class="card-title">Book Title 1</h5>
-<p class="card-text">Author: Author 1</p>
-<p class="card-text fw-bold">$15.00</p>
-<button class="btn btn-primary add-to-cart">Add to Cart</button>
-</div>
-</div>
-</div>
-<div class="col-md-3 mb-4">
-<div class="card book-card h-100">
-<img src="images/book2.jpg" class="card-img-top" alt="Book 2">
-<div class="card-body">
-<h5 class="card-title">Book Title 2</h5>
-<p class="card-text">Author: Author 2</p>
-<p class="card-text fw-bold">$20.00</p>
-<button class="btn btn-primary add-to-cart">Add to Cart</button>
-</div>
-</div>
-</div>
-<!-- Add more books here -->
-</div>
-</section>
-<!-- Cart -->
-<section id="cart" class="container my-5">
-<h2 class="mb-4">Your Cart</h2>
-<ul id="cartItems" class="list-group mb-3">
-<li class="list-group-item">Your cart is empty</li>
-</ul>
-<button class="btn btn-success" id="checkoutBtn">Checkout</button>
-</section>
-<!-- Footer -->
-<footer class="bg-dark text-white text-center py-4 mt-5">
-
-  © 2026 BookShop | Social Media Links
+</main>
+<footer>
+<p>© 2026 Mirzaei Bookstore | All rights reserved</p>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
