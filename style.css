@@ -1,3 +1,17 @@
+:root {
+
+    --mirzaei-green: #0f3d2e;
+
+    --mirzaei-gold: #b8863b;
+
+    --mirzaei-cream: #faf7f0;
+
+    --white: #ffffff;
+
+    --dark: #1f1f1f;
+
+}
+
 * {
 
     margin: 0;
@@ -10,27 +24,31 @@
 
 body {
 
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
 
-    background: #faf8f2;
+    background: var(--mirzaei-cream);
 
-    color: #1d2b24;
+    color: var(--dark);
 
 }
 
+/* TOP BAR */
+
 .top-bar {
 
-    background: #0f3d2e;
+    background: var(--mirzaei-green);
 
     color: white;
 
     text-align: center;
 
-    padding: 12px;
+    padding: 14px;
 
     font-size: 14px;
 
 }
+
+/* NAVBAR */
 
 .navbar {
 
@@ -44,11 +62,13 @@ body {
 
     background: white;
 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+
 }
 
 .logo-small img {
 
-    height: 80px;
+    height: 90px;
 
 }
 
@@ -66,11 +86,21 @@ body {
 
     text-decoration: none;
 
-    color: #0f3d2e;
+    color: var(--mirzaei-green);
 
-    font-weight: 600;
+    font-weight: bold;
+
+    transition: 0.3s;
 
 }
+
+.menu a:hover {
+
+    color: var(--mirzaei-gold);
+
+}
+
+/* HERO SECTION */
 
 .hero {
 
@@ -80,9 +110,9 @@ body {
 
     align-items: center;
 
-    padding: 80px;
+    padding: 90px 80px;
 
-    min-height: 80vh;
+    min-height: 85vh;
 
 }
 
@@ -94,11 +124,11 @@ body {
 
 .hero-left h1 {
 
-    font-size: 70px;
+    font-size: 72px;
 
-    font-family: 'Playfair Display', serif;
+    color: var(--mirzaei-green);
 
-    color: #0f3d2e;
+    line-height: 1.1;
 
     margin-bottom: 20px;
 
@@ -108,9 +138,9 @@ body {
 
     font-size: 22px;
 
-    margin-bottom: 30px;
+    line-height: 1.7;
 
-    line-height: 1.6;
+    margin-bottom: 30px;
 
 }
 
@@ -126,15 +156,17 @@ body {
 
     width: 100%;
 
-    max-width: 500px;
+    max-width: 520px;
 
 }
+
+/* BUTTON */
 
 .btn-main {
 
     display: inline-block;
 
-    background: #0f3d2e;
+    background: var(--mirzaei-green);
 
     color: white;
 
@@ -146,7 +178,17 @@ body {
 
     font-weight: bold;
 
+    transition: 0.3s;
+
 }
+
+.btn-main:hover {
+
+    background: var(--mirzaei-gold);
+
+}
+
+/* SECTIONS */
 
 .categories,
 
@@ -168,9 +210,11 @@ h2 {
 
     margin-bottom: 40px;
 
-    color: #0f3d2e;
+    color: var(--mirzaei-green);
 
 }
+
+/* GRID */
 
 .category-grid,
 
@@ -178,13 +222,15 @@ h2 {
 
     display: flex;
 
-    gap: 30px;
-
     justify-content: center;
+
+    gap: 30px;
 
     flex-wrap: wrap;
 
 }
+
+/* CARDS */
 
 .category-card,
 
@@ -200,9 +246,33 @@ h2 {
 
     width: 280px;
 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+
+    transition: 0.3s;
 
 }
+
+.category-card:hover,
+
+.book-card:hover,
+
+.review-box:hover {
+
+    transform: translateY(-8px);
+
+}
+
+.category-card h3,
+
+.book-card h3 {
+
+    color: var(--mirzaei-green);
+
+    margin-bottom: 15px;
+
+}
+
+/* BOOKS */
 
 .book-card img {
 
@@ -214,39 +284,125 @@ h2 {
 
 }
 
+.book-card p {
+
+    font-size: 20px;
+
+    color: var(--mirzaei-gold);
+
+    font-weight: bold;
+
+}
+
 .book-card a {
 
     display: inline-block;
 
     margin-top: 15px;
 
-    color: #0f3d2e;
+    text-decoration: none;
+
+    color: var(--mirzaei-green);
 
     font-weight: bold;
 
-    text-decoration: none;
+}
+
+.book-card a:hover {
+
+    color: var(--mirzaei-gold);
 
 }
+
+/* INSTAGRAM */
 
 .instagram-section p {
 
-    margin-bottom: 30px;
+    font-size: 22px;
 
-    font-size: 20px;
+    margin-bottom: 30px;
 
 }
 
+/* FOOTER */
+
 footer {
 
-    background: #0f3d2e;
+    background: var(--mirzaei-green);
 
     color: white;
 
     text-align: center;
 
-    padding: 60px 20px;
+    padding: 70px 20px;
 
     line-height: 2;
+
+}
+
+footer h3 {
+
+    margin-bottom: 20px;
+
+}
+
+/* MOBILE */
+
+@media(max-width: 992px) {
+
+    .hero {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 60px 30px;
+
+    }
+
+    .hero-left,
+
+    .hero-right {
+
+        width: 100%;
+
+    }
+
+    .hero-left h1 {
+
+        font-size: 48px;
+
+    }
+
+    .navbar {
+
+        flex-direction: column;
+
+        padding: 30px;
+
+        gap: 20px;
+
+    }
+
+    .menu {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+    .categories,
+
+    .books,
+
+    .instagram-section,
+
+    .reviews {
+
+        padding: 60px 30px;
+
+    }
 
 }
  
