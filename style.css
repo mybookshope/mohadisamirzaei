@@ -1,30 +1,112 @@
-:root {
-
-    --primary-green: #0f3d2e;
-
-    --luxury-gold: #b8863b;
-
-    --background-cream: #faf7f0;
-
-    --text-dark: #1a1a1a;
-
-}
-
 body {
 
-    background-color: var(--background-cream);
+    margin: 0;
 
-    color: var(--text-dark);
+    font-family: Arial, sans-serif;
 
-    font-family: 'Playfair Display', serif; /* فونت کلاسیک و لوکس */
+    background: #faf7f0;
+
+    color: #1f1f1f;
 
 }
 
 .navbar {
 
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 30px 80px;
+
     background: white;
 
-    border-bottom: 3px solid var(--luxury-gold);
+}
+
+.logo img {
+
+    height: 80px;
+
+}
+
+.menu {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 30px;
+
+}
+
+.menu a {
+
+    text-decoration: none;
+
+    color: #0f3d2e;
+
+    font-weight: bold;
+
+}
+
+.hero {
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+}
+
+.hero h1 {
+
+    font-size: 64px;
+
+    color: #0f3d2e;
+
+}
+
+.hero p {
+
+    font-size: 22px;
+
+    margin: 20px 0;
+
+}
+
+button {
+
+    background: #0f3d2e;
+
+    color: white;
+
+    border: none;
+
+    padding: 15px 30px;
+
+    border-radius: 40px;
+
+    cursor: pointer;
+
+}
+
+.books {
+
+    padding: 60px;
+
+    text-align: center;
+
+}
+
+.book-grid {
+
+    display: flex;
+
+    gap: 30px;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
 
 }
 
@@ -32,31 +114,55 @@ body {
 
     background: white;
 
-    border: 1px solid #ddd;
+    padding: 20px;
 
-    transition: 0.4s;
+    border-radius: 20px;
 
-}
+    width: 250px;
 
-.book-card:hover {
-
-    border-color: var(--luxury-gold);
-
-    box-shadow: 0 10px 20px rgba(15, 61, 46, 0.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 
 }
 
-.btn-mirzaei {
+.book-card img {
 
-    background: var(--primary-green);
+    width: 100%;
+
+    border-radius: 12px;
+
+}
+
+.contact {
+
+    text-align: center;
+
+    padding: 60px;
+
+}
+
+.contact iframe {
+
+    width: 80%;
+
+    height: 400px;
+
+    border: 0;
+
+    border-radius: 20px;
+
+    margin-top: 20px;
+
+}
+
+footer {
+
+    background: #0f3d2e;
 
     color: white;
 
-    border: none;
+    text-align: center;
 
-    padding: 10px 20px;
-
-    font-weight: bold;
+    padding: 40px;
 
 }
  
