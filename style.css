@@ -1,0 +1,62 @@
+:root {
+
+    --primary-green: #0f3d2e;
+
+    --luxury-gold: #b8863b;
+
+    --background-cream: #faf7f0;
+
+    --text-dark: #1a1a1a;
+
+}
+
+body {
+
+    background-color: var(--background-cream);
+
+    color: var(--text-dark);
+
+    font-family: 'Playfair Display', serif; /* فونت کلاسیک و لوکس */
+
+}
+
+.navbar {
+
+    background: white;
+
+    border-bottom: 3px solid var(--luxury-gold);
+
+}
+
+.book-card {
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    transition: 0.4s;
+
+}
+
+.book-card:hover {
+
+    border-color: var(--luxury-gold);
+
+    box-shadow: 0 10px 20px rgba(15, 61, 46, 0.1);
+
+}
+
+.btn-mirzaei {
+
+    background: var(--primary-green);
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 20px;
+
+    font-weight: bold;
+
+}
+ 
