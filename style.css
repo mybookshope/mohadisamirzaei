@@ -1,408 +1,146 @@
-:root {
-
-    --mirzaei-green: #0f3d2e;
-
-    --mirzaei-gold: #b8863b;
-
-    --mirzaei-cream: #faf7f0;
-
-    --white: #ffffff;
-
-    --dark: #1f1f1f;
-
-}
-
-* {
-
-    margin: 0;
-
-    padding: 0;
-
-    box-sizing: border-box;
-
-}
-
-body {
-
-    font-family: Arial, sans-serif;
-
-    background: var(--mirzaei-cream);
-
-    color: var(--dark);
-
-}
-
-/* TOP BAR */
-
-.top-bar {
-
-    background: var(--mirzaei-green);
-
-    color: white;
-
-    text-align: center;
-
-    padding: 14px;
-
-    font-size: 14px;
-
-}
-
-/* NAVBAR */
-
-.navbar {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    padding: 30px 80px;
-
-    background: white;
-
-    box-shadow: 0 8px 20px rgba(0,0,0,0.04);
-
-}
-
-.logo-small img {
-
-    height: 90px;
-
-}
-
-.menu {
-
-    display: flex;
-
-    list-style: none;
-
-    gap: 30px;
-
-}
-
-.menu a {
-
-    text-decoration: none;
-
-    color: var(--mirzaei-green);
-
-    font-weight: bold;
-
-    transition: 0.3s;
-
-}
-
-.menu a:hover {
-
-    color: var(--mirzaei-gold);
-
-}
-
-/* HERO SECTION */
-
-.hero {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    padding: 90px 80px;
-
-    min-height: 85vh;
-
-}
-
-.hero-left {
-
-    width: 50%;
-
-}
-
-.hero-left h1 {
-
-    font-size: 72px;
-
-    color: var(--mirzaei-green);
-
-    line-height: 1.1;
-
-    margin-bottom: 20px;
-
-}
-
-.hero-left p {
-
-    font-size: 22px;
-
-    line-height: 1.7;
-
-    margin-bottom: 30px;
-
-}
-
-.hero-right {
-
-    width: 45%;
-
-    text-align: center;
-
-}
-
-.hero-right img {
-
-    width: 100%;
-
-    max-width: 520px;
-
-}
-
-/* BUTTON */
-
-.btn-main {
-
-    display: inline-block;
-
-    background: var(--mirzaei-green);
-
-    color: white;
-
-    padding: 15px 35px;
-
-    border-radius: 50px;
-
-    text-decoration: none;
-
-    font-weight: bold;
-
-    transition: 0.3s;
-
-}
-
-.btn-main:hover {
-
-    background: var(--mirzaei-gold);
-
-}
-
-/* SECTIONS */
-
-.categories,
-
-.books,
-
-.instagram-section,
-
-.reviews {
-
-    padding: 80px;
-
-    text-align: center;
-
-}
-
-h2 {
-
-    font-size: 42px;
-
-    margin-bottom: 40px;
-
-    color: var(--mirzaei-green);
-
-}
-
-/* GRID */
-
-.category-grid,
-
-.book-grid {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 30px;
-
-    flex-wrap: wrap;
-
-}
-
-/* CARDS */
-
-.category-card,
-
-.book-card,
-
-.review-box {
-
-    background: white;
-
-    padding: 30px;
-
-    border-radius: 20px;
-
-    width: 280px;
-
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-
-    transition: 0.3s;
-
-}
-
-.category-card:hover,
-
-.book-card:hover,
-
-.review-box:hover {
-
-    transform: translateY(-8px);
-
-}
-
-.category-card h3,
-
-.book-card h3 {
-
-    color: var(--mirzaei-green);
-
-    margin-bottom: 15px;
-
-}
-
-/* BOOKS */
-
-.book-card img {
-
-    width: 100%;
-
-    border-radius: 15px;
-
-    margin-bottom: 15px;
-
-}
-
-.book-card p {
-
-    font-size: 20px;
-
-    color: var(--mirzaei-gold);
-
-    font-weight: bold;
-
-}
-
-.book-card a {
-
-    display: inline-block;
-
-    margin-top: 15px;
-
-    text-decoration: none;
-
-    color: var(--mirzaei-green);
-
-    font-weight: bold;
-
-}
-
-.book-card a:hover {
-
-    color: var(--mirzaei-gold);
-
-}
-
-/* INSTAGRAM */
-
-.instagram-section p {
-
-    font-size: 22px;
-
-    margin-bottom: 30px;
-
-}
-
-/* FOOTER */
-
-footer {
-
-    background: var(--mirzaei-green);
-
-    color: white;
-
-    text-align: center;
-
-    padding: 70px 20px;
-
-    line-height: 2;
-
-}
-
-footer h3 {
-
-    margin-bottom: 20px;
-
-}
-
-/* MOBILE */
-
-@media(max-width: 992px) {
-
-    .hero {
-
-        flex-direction: column;
-
-        text-align: center;
-
-        padding: 60px 30px;
-
-    }
-
-    .hero-left,
-
-    .hero-right {
-
-        width: 100%;
-
-    }
-
-    .hero-left h1 {
-
-        font-size: 48px;
-
-    }
-
-    .navbar {
-
-        flex-direction: column;
-
-        padding: 30px;
-
-        gap: 20px;
-
-    }
-
-    .menu {
-
-        flex-wrap: wrap;
-
-        justify-content: center;
-
-    }
-
-    .categories,
-
-    .books,
-
-    .instagram-section,
-
-    .reviews {
-
-        padding: 60px 30px;
-
-    }
-
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MIRZAEI BOOKSTORE</title>
+<!-- CSS FILE -->
+<link rel="stylesheet" href="style.css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- TOP BAR -->
+<div class="top-bar">
+
+    Free Shipping Above €49 | Get 20% OFF Your First Order
+</div>
+<!-- HEADER -->
+<header>
+<nav class="navbar">
+<!-- SMALL LOGO TOP -->
+<div class="logo-small">
+<img src="mylogo.png" alt="Mirzaei Bookstore">
+</div>
+<!-- MENU -->
+<ul class="menu">
+<li><a href="index.html">Home</a></li>
+<li><a href="shop.html">Collection</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="instagram.html">Instagram</a></li>
+</ul>
+</nav>
+</header>
+<!-- HERO SECTION -->
+<section class="hero">
+<!-- LEFT SIDE -->
+<div class="hero-left">
+<h1>
+
+            Every Book,<br>
+
+            A New World
+</h1>
+<p>
+
+            Welcome to MIRZAEI BOOKSTORE<br>
+
+            Onde Cada Livro É Um Mundo
+</p>
+<a href="shop.html" class="btn-main">
+
+            Explore Books
+</a>
+</div>
+<!-- RIGHT SIDE BIG LOGO -->
+<div class="hero-right">
+<img src="mylogo.png" alt="Luxury Logo">
+</div>
+</section>
+<!-- CATEGORIES -->
+<section class="categories">
+<h2>Book Categories</h2>
+<div class="category-grid">
+<div class="category-card">
+<h3>Bestsellers</h3>
+<p>Most loved books worldwide</p>
+</div>
+<div class="category-card">
+<h3>Used Books</h3>
+<p>Affordable premium books</p>
+</div>
+<div class="category-card">
+<h3>Afghan Books</h3>
+<p>Dari, Persian & Afghan Literature</p>
+</div>
+<div class="category-card">
+<h3>New Arrivals</h3>
+<p>Latest books collection</p>
+</div>
+</div>
+</section>
+<!-- BESTSELLER BOOKS -->
+<section class="books">
+<h2>Bestseller Books</h2>
+<div class="book-grid">
+<div class="book-card">
+<img src="https://covers.openlibrary.org/b/id/10523338-L.jpg" alt="Atomic Habits">
+<h3>Atomic Habits</h3>
+<p>€15</p>
+<a href="https://openlibrary.org" target="_blank">View Book</a>
+</div>
+<div class="book-card">
+<img src="https://covers.openlibrary.org/b/id/8231996-L.jpg" alt="The Alchemist">
+<h3>The Alchemist</h3>
+<p>€12</p>
+<a href="https://openlibrary.org" target="_blank">View Book</a>
+</div>
+<div class="book-card">
+<img src="https://covers.openlibrary.org/b/id/9251996-L.jpg" alt="The Kite Runner">
+<h3>The Kite Runner</h3>
+<p>€18</p>
+<a href="https://openlibrary.org" target="_blank">View Book</a>
+</div>
+</div>
+</section>
+<!-- INSTAGRAM SECTION -->
+<section class="instagram-section">
+<h2>Follow Our Instagram</h2>
+<p>@mirzaei_bookstore_official</p>
+<a href="https://www.instagram.com/mirzaei_bookstore_official" target="_blank" class="btn-main">
+
+        Visit Instagram
+</a>
+</section>
+<!-- CUSTOMER REVIEWS -->
+<section class="reviews">
+<h2>Customer Reviews</h2>
+<div class="review-box">
+
+        ⭐⭐⭐⭐⭐
+<p>Excellent service and beautiful books!</p>
+</div>
+<div class="review-box">
+
+        ⭐⭐⭐⭐⭐
+<p>Luxury bookstore with amazing collection.</p>
+</div>
+</section>
+<!-- FOOTER -->
+<footer>
+<h3>MIRZAEI BOOKSTORE</h3>
+<p>Email: mohadisamirzaei@gmail.com</p>
+<p>Phone: +351 920 627 718</p>
+<p>Location: Lisbon, Portugal</p>
+<p>
+
+        Secure Payment:
+
+        Visa | MasterCard | PayPal | Bank Transfer
+</p>
+<p>© 2026 All Rights Reserved</p>
+</footer>
+</body>
+</html>
  
