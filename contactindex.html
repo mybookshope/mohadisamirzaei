@@ -1,0 +1,22 @@
+<?php
+
+// فایل contact.php
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $name = $_POST['name'];
+
+    $email = $_POST['email'];
+
+    $message = $_POST['message'];
+
+    // ارسال ایمیل به شما
+
+    mail("mohadisamirzaei@gmail.com", "New Order/Message from $name", $message);
+
+    echo "Thank you! We will contact you soon.";
+
+}
+
+?>
+ 
