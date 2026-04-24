@@ -1,36 +1,137 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Livraria Mirzaei | Início</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header>
-<div class="logo">
-<img src="mylogo.png" alt="Logo">
-<h1>MIRZAEI <span>— LIVRARIA —</span></h1>
-</div>
-<nav>
-<a href="index.html">Início</a>
-<a href="collection.html">Coleção</a>
-<a href="about.html">Sobre Nós</a>
-<a href="contact.html">Contato</a>
-<a href="https://www.instagram.com/mirzaei_bookstore_official" target="_blank">Instagram</a>
-</nav>
-</header>
-<main>
-<section class="hero">
-<h2>Todo Livro, <br> Um Novo Mundo</h2>
-<p>Bem-vindo à LIVRARIA MIRZAEI<br>Onde Cada Livro É Um Mundo</p>
-<a href="collection.html" class="btn">Explore Livros</a>
-</section>
-</main>
-<footer>
-<p>© 2026 Livraria Mirzaei | Todos os direitos reservados</p>
-</footer>
-<script src="script.js"></script>
-</body>
-</html>
- 
+import React from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { ShoppingCart, BookOpen, Star, Truck, ShieldCheck } from 'lucide-react';
+
+export default function MirzaeiBookstoreHomepage() {
+  const categories = [
+    'Books',
+    'CDs',
+    'DVDs',
+    'Games',
+    'Education',
+    'Children',
+    'Business',
+    'Fiction'
+  ];
+
+  const featured = [
+    {
+      title: 'Featured Collection',
+      desc: 'Discover new and used books, rare editions, and bestselling titles.'
+    },
+    {
+      title: 'Fast Delivery',
+      desc: 'Worldwide shipping with secure packaging and order tracking.'
+    },
+    {
+      title: 'Safe Payments',
+      desc: 'Pay with PayPal, Stripe, Visa, Mastercard, or Cash on Delivery.'
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-white text-slate-800">
+      {/* Header */}
+      <header className="border-b bg-white sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div>
+            <h1 className="text-3xl font-serif font-bold tracking-wide text-green-900">MIRZAEI BOOKSTORE</h1>
+            <p className="text-sm text-amber-700">Onde Cada Livro É Um Mundo</p>
+          </div>
+
+          <nav className="hidden md:flex gap-6 text-sm font-medium">
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Categories</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </nav>
+
+          <Button className="rounded-2xl gap-2">
+            <ShoppingCart size={18} /> Cart
+          </Button>
+        </div>
+      </header>
+
+      {/* Hero */}
+      <section className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <p className="text-amber-700 font-medium mb-3">Premium Online Bookstore</p>
+          <h2 className="text-5xl font-bold leading-tight mb-6 text-green-950">
+            Books, CDs, DVDs & Games — All In One Place
+          </h2>
+          <p className="text-lg text-slate-600 mb-8">
+            Buy new and used books with trusted delivery, secure payments, and a premium customer experience.
+          </p>
+
+          <div className="flex gap-4 flex-wrap">
+            <Button className="rounded-2xl px-8 py-6 text-base">Shop Now</Button>
+            <Button variant="outline" className="rounded-2xl px-8 py-6 text-base">
+              View Categories
+            </Button>
+          </div>
+        </div>
+
+        <Card className="rounded-3xl shadow-lg border-0">
+          <CardContent className="p-10">
+            <div className="space-y-6">
+              <div className="flex items-center gap-4">
+                <BookOpen className="w-8 h-8" />
+                <span className="text-lg font-semibold">Large Book Collection</span>
+              </div>
+              <div className="flex items-center gap-4">
+                <Truck className="w-8 h-8" />
+                <span className="text-lg font-semibold">Worldwide Shipping</span>
+              </div>
+              <div className="flex items-center gap-4">
+                <ShieldCheck className="w-8 h-8" />
+                <span className="text-lg font-semibold">Secure Checkout</span>
+              </div>
+              <div className="flex items-center gap-4">
+                <Star className="w-8 h-8" />
+                <span className="text-lg font-semibold">Trusted by Customers</span>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* Categories */}
+      <section className="max-w-7xl mx-auto px-6 py-16">
+        <h3 className="text-3xl font-bold mb-8">Popular Categories</h3>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {categories.map((item) => (
+            <Card key={item} className="rounded-2xl shadow-sm hover:shadow-md transition">
+              <CardContent className="p-6 text-center font-semibold">
+                {item}
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Features */}
+      <section className="bg-slate-50 py-20 px-6">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6">
+          {featured.map((item) => (
+            <Card key={item.title} className="rounded-3xl border-0 shadow-sm">
+              <CardContent className="p-8">
+                <h4 className="text-xl font-bold mb-3">{item.title}</h4>
+                <p className="text-slate-600">{item.desc}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-green-950 text-white py-10 px-6 mt-10">
+        <div className="max-w-7xl mx-auto text-center">
+          <h4 className="text-2xl font-bold mb-2">Mirzaei Bookstore</h4>
+          <p className="text-sm opacity-80">Full Professional Online Bookstore Platform</p>
+        </div>
+      </footer>
+    </div>
+  );
+}
