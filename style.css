@@ -1,270 +1,69 @@
-* {
-
-    margin: 0;
-
-    padding: 0;
-
-    box-sizing: border-box;
-
+:root {
+  --dark-green: #0f3d2e; /* trust, elegance, premium */
+  --gold: #b8863b;       /* sophistication and highlights */
+  --cream: #faf7f0;        /* clean, elegant background */
+  --text: #1b1b1b;
 }
 
-body {
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: Inter, system-ui, -apple-system, sans-serif; color: var(--text); background: var(--cream); }
 
-    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+a { color: var(--dark-green); text-decoration: none; }
+img { max-width: 100%; height: auto; display: block; }
 
-    background-color: #faf8f3;
+.container { width: 92%; max-width: 1200px; margin: 0 auto; }
 
-    color: #2c2b28;
+/* Header & Nav */
+header.site-header { background: #fff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 12px; }
+.logo img { height: 52px; }
+.nav-links { list-style: none; display: flex; gap: 18px; margin: 0; padding: 0; font-size: 14px; }
+.nav-links a { padding: 8px 12px; border-radius: 6px; transition: background 0.25s; }
+.nav-links a:hover { background: #f2f2f2; }
+.lang-switch { font-size: 12px; color: #555; }
 
-    line-height: 1.5;
+/* Promo bar */
+.promo-bar { background: var(--dark-green); color: #fff; text-align: center; padding: 10px 0; font-weight: 600; }
 
+/* Hero (Home) */
+.hero { padding: 72px 0; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(#faf7f0, #faf7f0); min-height: 520px; }
+.hero-inner { padding: 20px; }
+.hero-logo { height: 140px; margin-bottom: 12px; filter: drop-shadow(0 4px 8px rgba(0,0,0,.15)); }
+.hero h1 { font-family: Playfair Display, serif; font-size: 40px; color: var(--dark-green); margin: 8px 0 6px; }
+.hero p { font-size: 18px; color: #555; margin: 0 0 18px; }
+
+/* Buttons */
+.btn { display: inline-block; padding: 12px 20px; border-radius: 8px; border: 1px solid transparent; font-weight: 700; cursor: pointer; }
+.btn-primary { background: var(--gold); color: #2a1f0a; border-color: rgba(0,0,0,.1); box-shadow: 0 2px 6px rgba(0,0,0,.15); }
+.btn-secondary { background: transparent; border: 1px solid var(--dark-green); color: var(--dark-green); }
+
+/* Section titles */
+.section-title { font-family: Playfair Display, serif; color: var(--dark-green); font-size: 28px; margin: 0 0 6px; }
+
+/* Book grid cards */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; }
+.book-card { background: #fff; border: 1px solid #eee; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+.book-cover { width: 100%; height: 240px; object-fit: cover; background: #f5f5f5; }
+.book-info { padding: 12px; display: flex; flex-direction: column; gap: 6px; }
+.book-title { font-size: 16px; margin: 0; font-weight: 700; }
+.book-author { font-size: 13px; color: #555; }
+.book-language { font-size: 12px; color: #888; }
+.price { font-size: 16px; font-weight: 700; color: var(--dark-green); margin-top: auto; }
+.badge { display: inline-block; padding: 4px 8px; border-radius: 999px; font-size: 11px; background: var(--gold); color: #3a2a0c; font-weight: 700; }
+
+/* Card actions */
+.card-actions { display: flex; justify-content: space-between; padding: 8px 12px 14px; }
+
+/* Footer */
+footer { background: #fff; color: #555; padding: 24px 0; border-top: 1px solid #eee; }
+.footer-links { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+
+/* Instagram teaser */
+.instagram-embed { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+
+/* Responsive tweaks */
+@media (max-width: 700px) {
+  .nav-links { display: none; }
+  .hero { padding: 40px 0; min-height: 420px; }
+  .instagram-embed { grid-template-columns: repeat(2, 1fr); }
 }
-
-header {
-
-    background-color: #1e3a2f;
-
-    color: white;
-
-    padding: 1rem 2rem;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    flex-wrap: wrap;
-
-}
-
-.logo {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 1rem;
-
-}
-
-.logo img {
-
-    width: 50px;
-
-    height: 50px;
-
-    object-fit: contain;
-
-}
-
-.logo h1 {
-
-    font-size: 1.5rem;
-
-    font-weight: normal;
-
-}
-
-.logo span {
-
-    font-weight: bold;
-
-}
-
-nav a {
-
-    color: white;
-
-    text-decoration: none;
-
-    margin-left: 1.5rem;
-
-    padding: 0.5rem;
-
-    transition: 0.3s;
-
-}
-
-nav a:hover {
-
-    background-color: #2d5a48;
-
-    border-radius: 5px;
-
-}
-
-main {
-
-    min-height: 70vh;
-
-    padding: 3rem 2rem;
-
-}
-
-.hero {
-
-    text-align: center;
-
-    background: linear-gradient(135deg, #e8dcc8 0%, #d4c4a8 100%);
-
-    padding: 4rem 2rem;
-
-    border-radius: 20px;
-
-    max-width: 900px;
-
-    margin: 0 auto;
-
-}
-
-.hero h2 {
-
-    font-size: 3rem;
-
-    margin-bottom: 1rem;
-
-    color: #1e3a2f;
-
-}
-
-.hero p {
-
-    font-size: 1.2rem;
-
-    margin-bottom: 2rem;
-
-}
-
-.btn {
-
-    background-color: #1e3a2f;
-
-    color: white;
-
-    padding: 0.8rem 2rem;
-
-    text-decoration: none;
-
-    border-radius: 30px;
-
-    display: inline-block;
-
-    transition: 0.3s;
-
-}
-
-.btn:hover {
-
-    background-color: #2d5a48;
-
-    transform: scale(1.05);
-
-}
-
-.collection, .about, .contact {
-
-    max-width: 900px;
-
-    margin: 0 auto;
-
-    background: white;
-
-    padding: 2rem;
-
-    border-radius: 20px;
-
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-
-}
-
-.collection h2, .about h2, .contact h2 {
-
-    color: #1e3a2f;
-
-    margin-bottom: 1.5rem;
-
-    border-bottom: 3px solid #d4c4a8;
-
-    padding-bottom: 0.5rem;
-
-}
-
-.books {
-
-    display: flex;
-
-    gap: 2rem;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
-
-}
-
-.book {
-
-    background: #f0ebe0;
-
-    padding: 2rem;
-
-    border-radius: 15px;
-
-    font-size: 1.2rem;
-
-    min-width: 150px;
-
-    text-align: center;
-
-}
-
-.contact p {
-
-    margin: 1rem 0;
-
-    padding: 0.5rem;
-
-    background: #f9f7f2;
-
-    border-radius: 8px;
-
-}
-
-footer {
-
-    background-color: #1e3a2f;
-
-    color: white;
-
-    text-align: center;
-
-    padding: 1.5rem;
-
-    margin-top: 2rem;
-
-}
-
-@media (max-width: 768px) {
-
-    header {
-
-        flex-direction: column;
-
-        gap: 1rem;
-
-    }
-
-    nav a {
-
-        margin: 0 0.5rem;
-
-    }
-
-    .hero h2 {
-
-        font-size: 2rem;
-
-    }
-
-}
- 
