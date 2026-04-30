@@ -1,1 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MIRZAEI BOOKSTORE | Shop</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
 
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="MIRZAEI BOOKSTORE Home">
+        <img src="/assets/images/mylogo.png" alt="MIRZAEI BOOKSTORE Logo" />
+      </a>
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="bestsellers.html">Bestsellers</a>
+        <a href="new-arrivals.html">New Arrivals</a>
+        <a href="afghan-books.html">Afghan Books</a>
+        <a href="contact-us.html">Contact</a>
+        <a href="cart.html">Cart</a>
+        <a href="login.html">Login</a>
+      </nav>
+      <div class="lang-switch" aria-label="Language Switch">
+        <a href="/en/index.html">English</a> | 
+        <a href="/pt/index.html">Português</a> | 
+        <a href="/fa/index.html">فارسی</a> | 
+        <a href="/ar/index.html">العربية</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" aria-label="Shop hero" style="min-height:280px;">
+    <div class="container hero-inner">
+      <h1 style="font-family: Playfair Display, serif; margin: 0 0 6px; color: var(--dark-green);">Shop</h1>
+      <p style="color:#555; margin:0 0 12px; text-align:center;">Browse our handpicked collection</p>
+    </div>
+  </section>
+
+  <section aria-label="Product Grid" style="padding: 24px 0;">
+    <div class="container">
+      <div class="grid">
+        <!-- Card 1 -->
+        <article class="book-card" aria-label="Book: The Afghan Tales">
+          <img class="book-cover" src="https://picsum.photos/seed/cover-afghan-tales/260/360" alt="The Afghan Tales cover" />
+          <div class="book-info">
+            <span class="badge" aria-label="Bestseller">Bestseller</span>
+            <h3 class="book-title">The Afghan Tales</h3>
+            <p class="book-author">by Farah Khan</p>
+            <p class="book-language">Dari</p>
+            <div class="price">$18.99</div>
+          </div>
+          <div class="card-actions">
+            <button class="btn" data-id="b001" data-title="The Afghan Tales" data-price="18.99" aria-label="Add The Afghan Tales to cart">Add to Cart</button>
+            <a href="shop/book-b001.html" class="btn btn-secondary" aria-label="View The Afghan Tales details">Details</a>
+          </div>
+        </article>
+        <!-- Card 2 -->
+        <article class="book-card" aria-label="Book: Dari Garden">
+          <img class="book-cover" src="https://picsum.photos/seed/cover-dari-garden/260/360" alt="The Dari Garden cover" />
+          <div class="book-info">
+            <span class="badge" aria-label="New">New</span>
+            <h3 class="book-title">The Dari Garden</h3>
+            <p class="book-author">by A. Rahimi</p>
+            <p class="book-language">Dari</p>
+            <div class="price">$21.50</div>
+          </div>
+          <div class="card-actions">
+            <button class="btn" data-id="b002" data-title="The Dari Garden" data-price="21.5" aria-label="Add The Dari Garden to cart">Add to Cart</button>
+            <a href="shop/book-b002.html" class="btn btn-secondary" aria-label="View The Dari Garden details">Details</a>
+          </div>
+        </article>
+        <!-- Card 3 -->
+        <article class="book-card" aria-label="Book: Tea in Kabul">
+          <img class="book-cover" src="https://picsum.photos/seed/cover-tea-kabul/260/360" alt="Tea in Kabul cover" />
+          <div class="book-info">
+            <span class="badge" aria-label="Used">Used</span>
+            <h3 class="book-title">Tea in Kabul</h3>
+            <p class="book-author">by Laila Noor</p>
+            <p class="book-language">Persian</p>
+            <div class="price">$12.99</div>
+          </div>
+          <div class="card-actions">
+            <button class="btn" data-id="b003" data-title="Tea in Kabul" data-price="12.99" aria-label="Add Tea in Kabul to cart">Add to Cart</button>
+            <a href="shop/book-b003.html" class="btn btn-secondary" aria-label="View Tea in Kabul details">Details</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer aria-label="Footer">
+    <div class="container footer-links">
+      <div>
+        <strong>Customer Support</strong>
+        <ul style="list-style:none; padding:0; margin:6px 0;">
+          <li><a href="contact-us.html">Contact Us</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="track-order.html">Track Your Order</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Policies</strong>
+        <ul style="list-style:none; padding:0; margin:6px 0;">
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="return-policy.html">Return Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Delivery</strong>
+        <ul style="list-style:none; padding:0; margin:6px 0;">
+          <li>Worldwide Delivery</li>
+          <li>Secure Payments</li>
+        </ul>
+      </div>
+      <div>
+        <strong>Location</strong>
+        <p>Lisbon, Portugal</p>
+        <p>mohadisamirzaei@gmail.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const addButtons = document.querySelectorAll('[data-id]');
+      addButtons.forEach(btn => {
+        btn.addEventListener('click', function (e) {
+          const id = e.currentTarget.getAttribute('data-id');
+          const title = e.currentTarget.getAttribute('data-title') || e.currentTarget.closest('.book-card')?.querySelector('.book-title')?.innerText;
+          const price = parseFloat(e.currentTarget.getAttribute('data-price')) || 0;
+          let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+          const existing = cart.find(item => item.id === id);
+          if (existing) existing.qty += 1; else cart.push({ id, title, price, qty: 1 });
+          localStorage.setItem('cart', JSON.stringify(cart));
+          alert('Added to cart: ' + (title || id));
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
