@@ -146,4 +146,374 @@
 </footer>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MIRZAEI BOOKSTORE</title>
+  <meta name="description" content="MIRZAEI BOOKSTORE — Onde Cada Livro É Um Mundo. Luxury, premium online bookstore." />
+
+  <!-- Fonts (premium feel) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --dark-green: #0f3d2e; /* trust, elegance, premium */
+      --gold: #b8863b;       /* sophistication and highlights */
+      --cream: #faf7f0;        /* clean, elegant background */
+      --text: #1b1b1b;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; font-family: Inter, system-ui, -apple-system, sans-serif; color: var(--text); background: var(--cream); }
+
+    a { color: var(--dark-green); text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* Layout helpers */
+    .container { width: 92%; max-width: 1200px; margin: 0 auto; }
+
+    /* Header */
+    header.site-header { background: #fff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 12px; }
+    .logo img { height: 52px; }
+    .nav-links { list-style: none; display: flex; gap: 18px; margin: 0; padding: 0; font-size: 14px; }
+    .nav-links a { padding: 8px 12px; border-radius: 6px; transition: background 0.25s, color 0.25s; }
+    .nav-links a:hover { background: #f2f2f2; }
+    .lang-switch { font-size: 12px; color: #555; }
+
+    /* Promo bar */
+    .promo-bar { background: var(--dark-green); color: #fff; text-align: center; padding: 10px 0; font-weight: 600; }
+    .promo-bar a { color: #fff; text-decoration: underline; }
+
+    /* Hero */
+    .hero { padding: 72px 0; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(#faf7f0, #faf7f0); min-height: 520px; }
+    .hero-inner { padding: 20px; }
+    .hero-logo { height: 140px; filter: drop-shadow(0 4px 8px rgba(0,0,0,.15)); margin-bottom: 12px; }
+    .hero h1 { font-family: Playfair Display, serif; font-size: 40px; color: var(--dark-green); margin: 8px 0 6px; letter-spacing: .5px; }
+    .hero p { font-size: 18px; color: #555; margin: 0 0 18px; }
+    .btn { display: inline-block; padding: 12px 20px; border-radius: 8px; border: 1px solid transparent; font-weight: 700; cursor: pointer; }
+    .btn-primary { background: var(--gold); color: #2a1f0a; border-color: rgba(0,0,0,.1); box-shadow: 0 2px 6px rgba(0,0,0,.15); }
+    .btn-secondary { background: transparent; border: 1px solid var(--dark-green); color: var(--dark-green); }
+
+    /* Sections */
+    section { padding: 48px 0; }
+    .section-title { font-family: Playfair Display, serif; color: var(--dark-green); font-size: 28px; margin: 0 0 6px; }
+    .section-sub { color: #666; margin-bottom: 16px; text-align: center; }
+
+    /* Book grid */
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; }
+    .book-card { background: #fff; border: 1px solid #eee; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+    .book-cover { width: 100%; height: 240px; object-fit: cover; background: #f5f5f5; }
+    .book-info { padding: 12px; display: flex; flex-direction: column; gap: 6px; }
+    .book-title { font-size: 16px; margin: 0; font-weight: 700; }
+    .book-author { font-size: 13px; color: #555; }
+    .book-language { font-size: 12px; color: #888; }
+    .price { font-size: 16px; font-weight: 700; color: var(--dark-green); margin-top: auto; }
+    .badge { display: inline-block; padding: 4px 8px; border-radius: 999px; font-size: 11px; background: var(--gold); color: #3a2a0c; font-weight: 700; }
+    .card-actions { display: flex; justify-content: space-between; padding: 8px 12px 14px; }
+
+    /* Instagram teaser */
+    .instagram { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: center; padding: 0; }
+    .instagram-cta { text-align: center; padding: 8px; }
+    .instagram-embed { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+    .instagram-embed img { width: 100%; height: 60px; object-fit: cover; border-radius: 6px; }
+
+    /* Footer */
+    footer { background: #fff; color: #555; padding: 24px 0; border-top: 1px solid #eee; }
+    .footer-links { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+
+    /* Responsive tweaks */
+    @media (max-width: 700px) {
+      .nav-links { display: none; }
+      .hero { padding: 40px 0; min-height: 420px; }
+      .instagram { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Promo bar -->
+  <div class="promo-bar" role="region" aria-label="Promotional banner">
+    Get 20% OFF Your First Order – Use code FIRST20 at checkout
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="MIRZAEI BOOKSTORE Home">
+        <img src="assets/images/mylogo.png" alt="MIRZAEI BOOKSTORE Logo" style="height: 52px;">
+      </a>
+      <ul class="nav-links" aria-label="Main Navigation">
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="bestsellers.html">Bestsellers</a></li>
+        <li><a href="new-arrivals.html">New Arrivals</a></li>
+        <li><a href="afghan-books.html">Afghan Books</a></li>
+        <li><a href="contact-us.html">Contact</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+      <div class="lang-switch" aria-label="Language Switch">
+        <a href="index.html">English</a> | 
+        <a href="pt/index.html">Português</a> | 
+        <a href="fa/index.html">فارسی</a> | 
+        <a href="ar/index.html">العربية</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" aria-label="Hero">
+    <div class="container hero-inner">
+      <img src="assets/images/mylogo.png" alt="MIRZAEI BOOKSTORE" class="hero-logo" />
+      <h1>Onde Cada Livro É Um Mundo</h1>
+      <p>Luxurious books. Timeless stories. Worldwide delivery.</p>
+      <a href="shop.html" class="btn btn-primary" aria-label="Shop Now">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Bestsellers Preview -->
+  <section aria-label="Bestsellers">
+    <div class="container" style="text-align:center;">
+      <div class="section-header" style="display:flex; justify-content: center; align-items: baseline; gap: 12px; margin-bottom:6px;">
+        <h2 class="section-title" style="margin:0;">Bestsellers</h2>
+        <a class="view-all" href="bestsellers.html" aria-label="View all bestsellers" style="font-size:13px;">View all</a>
+      </div>
+      <p class="section-sub" style="margin-bottom: 12px;">Curated list of top-loved titles</p>
+    </div>
+
+    <div class="container grid" id="bestsellers-grid" style="margin-top: 6px;">
+      <!-- Card 1 -->
+      <article class="book-card" aria-label="Book: The Afghan Tales">
+        <img class="book-cover" src="https://picsum.photos/seed/cover-afghan-tales/260/360" alt="The Afghan Tales cover" />
+        <div class="book-info">
+          <span class="badge" aria-label="Bestseller">Bestseller</span>
+          <h3 class="book-title">The Afghan Tales</h3>
+          <p class="book-author">by Farah Khan</p>
+          <p class="book-language">Dari</p>
+          <div class="price">$18.99</div>
+        </div>
+        <div class="card-actions">
+          <button class="btn" data-id="b001" data-title="The Afghan Tales" data-price="18.99" aria-label="Add The Afghan Tales to cart">Add to Cart</button>
+          <a href="shop/book-b001.html" class="btn btn-secondary" aria-label="View The Afghan Tales details">Details</a>
+        </div>
+      </article>
+      <!-- Card 2 -->
+      <article class="book-card" aria-label="Book: The Dari Garden">
+        <img class="book-cover" src="https://picsum.photos/seed/cover-dari-garden/260/360" alt="The Dari Garden cover" />
+        <div class="book-info">
+          <span class="badge" aria-label="New">New</span>
+          <h3 class="book-title">The Dari Garden</h3>
+          <p class="book-author">by A. Rahimi</p>
+          <p class="book-language">Dari</p>
+          <div class="price">$21.50</div>
+        </div>
+        <div class="card-actions">
+          <button class="btn" data-id="b002" data-title="The Dari Garden" data-price="21.50" aria-label="Add The Dari Garden to cart">Add to Cart</button>
+          <a href="shop/book-b002.html" class="btn btn-secondary" aria-label="View The Dari Garden details">Details</a>
+        </div>
+      </article>
+      <!-- Card 3 -->
+      <article class="book-card" aria-label="Book: Tea in Kabul">
+        <img class="book-cover" src="https://picsum.photos/seed/cover-tea-kabul/260/360" alt="Tea in Kabul cover" />
+        <div class="book-info">
+          <span class="badge" aria-label="Used">Used</span>
+          <h3 class="book-title">Tea in Kabul</h3>
+          <p class="book-author">by Laila Noor</p>
+          <p class="book-language">Persian</p>
+          <div class="price">$12.99</div>
+        </div>
+        <div class="card-actions">
+          <button class="btn" data-id="b003" data-title="Tea in Kabul" data-price="12.99" aria-label="Add Tea in Kabul to cart">Add to Cart</button>
+          <a href="shop/book-b003.html" class="btn btn-secondary" aria-label="View Tea in Kabul details">Details</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- New Arrivals -->
+  <section aria-label="New Arrivals">
+    <div class="container" style="text-align:center;">
+      <div class="section-header" style="display:flex; justify-content: center; align-items: baseline; gap: 12px; margin-bottom:6px;">
+        <h2 class="section-title" style="margin:0;">New Arrivals</h2>
+        <a class="view-all" href="new-arrivals.html" aria-label="View all new arrivals" style="font-size:13px;">View all</a>
+      </div>
+      <p class="section-sub" style="margin-bottom: 12px;">Freshly published and newly added titles</p>
+    </div>
+
+    <div class="container grid" id="new-arrivals-grid" style="margin-top: 6px;">
+      <!-- Card 1 -->
+      <article class="book-card" aria-label="Book: The Kabul Letters">
+        <img class="book-cover" src="https://picsum.photos/seed/cover-kabul-letters/260/360" alt="The Kabul Letters cover" />
+        <div class="book-info">
+          <h3 class="book-title">The Kabul Letters</h3>
+          <p class="book-author">by Mina Farooqi</p>
+          <p class="book-language">Dari</p>
+          <div class="price">$17.00</div>
+        </div>
+        <div class="card-actions">
+          <button class="btn" data-id="b004" data-title="The Kabul Letters" data-price="17" aria-label="Add The Kabul Letters to cart">Add to Cart</button>
+          <a href="shop/book-b004.html" class="btn btn-secondary" aria-label="View The Kabul Letters details">Details</a>
+        </div>
+      </article>
+      <!-- Card 2 -->
+      <article class="book-card" aria-label="Book: Silk Road Nights">
+        <img class="book-cover" src="https://picsum.photos/seed/cover-silk-road/260/360" alt="Silk Road Nights cover" />
+        <div class="book-info">
+          <h3 class="book-title">Silk Road Nights</h3>
+          <p class="book-author">by Omar Qureshi</p>
+          <p class="book-language">English / Dari</p>
+          <div class="price">$22.40</div>
+        </div>
+        <div class="card-actions">
+          <button class="btn" data-id="b005" data-title="Silk Road Nights" data-price="22.40" aria-label="Add Silk Road Nights to cart">Add to Cart</button>
+          <a href="shop/book-b005.html" class="btn btn-secondary" aria-label="View Silk Road Nights details">Details</a>
+        </div>
+      </article>
+      <!-- Card 3 -->
+      <article class="book-card" aria-label="Book: Kabul Whisper">
+        <img class="book-cover" src="https://picsum.photos/seed/cover-kabul-whisper/260/360" alt="Kabul Whisper cover" />
+        <div class="book-info">
+          <h3 class="book-title">Kabul Whisper</h3>
+          <p class="book-author">by Samira Noori</p>
+          <p class="book-language">Persian</p>
+          <div class="price">$19.99</div>
+        </div>
+        <div class="card-actions">
+          <button class="btn" data-id="b006" data-title="Kabul Whisper" data-price="19.99" aria-label="Add Kabul Whisper to cart">Add to Cart</button>
+          <a href="shop/book-b006.html" class="btn btn-secondary" aria-label="View Kabul Whisper details">Details</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Afghan & Persian / Afghan Literature teaser -->
+  <section aria-label="Afghan & Dari/Persian Books">
+    <div class="container" style="text-align:center;">
+      <h2 class="section-title" style="margin-bottom:6px;">Afghan & Dari / Persian Books</h2>
+      <p class="section-sub" style="margin:0 auto; max-width:720px;">Curated collection focusing on Afghanistan, Afghan literature, Dari and Persian titles.</p>
+    </div>
+    <!-- Simple inline mini-grid (repeat or mirror from above if desired) -->
+    <div class="container grid" style="margin-top: 6px;">
+      <article class="book-card" aria-label="Book: Afghan Tales II">
+        <img class="book-cover" src="https://picsum.photos/seed/cover-afghan-tales-ii/260/360" alt="Afghan Tales II cover" />
+        <div class="book-info">
+          <h3 class="book-title">Afghan Tales II</h3>
+          <p class="book-author">by N. Khaliq</p>
+          <p class="book-language">Dari</p>
+          <div class="price">$16.50</div>
+        </div>
+        <div class="card-actions">
+          <button class="btn" data-id="b007" data-title="Afghan Tales II" data-price="16.5" aria-label="Add Afghan Tales II to cart">Add to Cart</button>
+          <a href="shop/book-b007.html" class="btn btn-secondary" aria-label="View Afghan Tales II details">Details</a>
+        </div>
+      </article>
+      <article class="book-card" aria-label="Book: Persian Reflections">
+        <img class="book-cover" src="https://picsum.photos/seed/cover-persian-reflections/260/360" alt="Persian Reflections cover" />
+        <div class="book-info">
+          <h3 class="book-title">Persian Reflections</h3>
+          <p class="book-author">by Z. Rostami</p>
+          <p class="book-language">Persian</p>
+          <div class="price">$20.00</div>
+        </div>
+        <div class="card-actions">
+          <button class="btn" data-id="b008" data-title="Persian Reflections" data-price="20" aria-label="Add Persian Reflections to cart">Add to Cart</button>
+          <a href="shop/book-b008.html" class="btn btn-secondary" aria-label="View Persian Reflections details">Details</a>
+        </div>
+      </article>
+      <article class="book-card" aria-label="Book: Afghanistan Stories">
+        <img class="book-cover" src="https://picsum.photos/seed/cover-afghanistan-stories/260/360" alt="Afghanistan Stories cover" />
+        <div class="book-info">
+          <h3 class="book-title">Afghanistan Stories</h3>
+          <p class="book-author">by H. Abdi</p>
+          <p class="book-language">English / Dari</p>
+          <div class="price">$21.75</div>
+        </div>
+        <div class="card-actions">
+          <button class="btn" data-id="b009" data-title="Afghanistan Stories" data-price="21.75" aria-label="Add Afghanistan Stories to cart">Add to Cart</button>
+          <a href="shop/book-b009.html" class="btn btn-secondary" aria-label="View Afghanistan Stories details">Details</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Instagram CTA -->
+  <section aria-label="Instagram">
+    <div class="container instagram">
+      <div>
+        <h2 class="section-title" style="margin:0 0 6px 0;">Follow MIRZAEI BOOKSTORE on Instagram</h2>
+        <p class="section-sub" style="margin:0 0 12px 0;">@mirzaei_bookstore_official</p>
+        <a class="btn btn-primary" href="https://www.instagram.com/mirzaei_bookstore_official/" target="_blank" aria-label="Visit Instagram">Visit Instagram</a>
+      </div>
+      <div class="instagram-embed" aria-label="Instagram previews (static)">
+        <img src="https://via.placeholder.com/150x150.png?text=IG1" alt="Instagram preview 1">
+        <img src="https://via.placeholder.com/150x150.png?text=IG2" alt="Instagram preview 2">
+        <img src="https://via.placeholder.com/150x150.png?text=IG3" alt="Instagram preview 3">
+        <img src="https://via.placeholder.com/150x150.png?text=IG4" alt="Instagram preview 4">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer aria-label="Footer">
+    <div class="container footer-links" style="gap:20px;">
+      <div>
+        <strong>Customer Support</strong>
+        <ul style="list-style:none; padding:0; margin:6px 0;">
+          <li><a href="contact-us.html">Contact Us</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+          <li><a href="track-order.html">Track Your Order</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Policies</strong>
+        <ul style="list-style:none; padding:0; margin:6px 0;">
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="return-policy.html">Return Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Delivery</strong>
+        <ul style="list-style:none; padding:0; margin:6px 0;">
+          <li>Worldwide Delivery</li>
+          <li>Secure Payments</li>
+        </ul>
+      </div>
+      <div>
+        <strong>Location</strong>
+        <p>Lisbon, Portugal</p>
+        <p>mohadisamirzaei@gmail.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Inline JS: simple "Add to Cart" using localStorage -->
+  <script>
+    (function () {
+      // Attach to all book cards that have data-id attribute on the Add to Cart button
+      const addButtons = document.querySelectorAll('[data-id]');
+      addButtons.forEach(btn => {
+        btn.addEventListener('click', function (e) {
+          const id = e.currentTarget.getAttribute('data-id');
+          const title = e.currentTarget.getAttribute('data-title') || e.currentTarget.closest('.book-card')?.querySelector('.book-title')?.innerText;
+          const price = parseFloat(e.currentTarget.getAttribute('data-price')) || 0;
+          let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+          const existing = cart.find(item => item.id === id);
+          if (existing) {
+            existing.qty += 1;
+          } else {
+            cart.push({ id, title, price, qty: 1 });
+          }
+          localStorage.setItem('cart', JSON.stringify(cart));
+          alert('Added to cart: ' + (title || id));
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
  
